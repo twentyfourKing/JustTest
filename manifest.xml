@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch=".." name="smartisan" review="ssh://review.smartisan.cn/"/>
+  <remote fetch="../.." name="smartisanos" review="ssh://review.smartisan.cn/"/>
+  
+  <default remote="smartisan" revision="trident-rom"/>
+  
+  <project name="CyanogenMod/android_packages_apps_CMUpdater" path="packages/apps/CMUpdater" remote="smartisanos" revision="24e043fca738886e0c97630e9fc0d5477899c6ac" upstream="master"/>
+  <project name="CyanogenMod/android_packages_apps_Calendar" path="packages/apps/CalendarSmartisan" remote="smartisanos" revision="ac4a203e837635974aa62d7a4ca07eb67d23bf60" upstream="master"/>
+  <project name="CyanogenMod/android_packages_apps_Contacts" path="packages/apps/ContactsSmartisan" remote="smartisanos" revision="cff90d4cf3934719cefd4f5c0322447543dd9bfc" upstream="master"/>
+  <project name="CyanogenMod/android_packages_apps_Gallery2" path="packages/apps/GallerySmartisan" remote="smartisanos" revision="cf73a42cb71de622cb3a5731325edd86dc6e49ff" upstream="master"/>
+  <project name="CyanogenMod/android_packages_apps_Mms" path="packages/apps/MmsSmartisan" remote="smartisanos" revision="c3e04ef26f31d222bf8e7f03e7d64dc27d4cb600" upstream="master"/>
+  <project name="CyanogenMod/android_packages_apps_QuickSearchBox" path="packages/apps/QuickSearchBoxSmartisan" remote="smartisanos" revision="9302ca6a8c0af93f9b712bb8a364b980e6756e1b" upstream="master"/>
+  <project name="CyanogenMod/android_packages_apps_Settings" path="packages/apps/SettingsSmartisan" remote="smartisanos" revision="105258a254606489460a32b66e6d22b34e844a61" upstream="odin-rom"/>
+  <project name="abl/tianocore/edk2" path="bootable/bootloader/edk2" revision="eddcb2dd18a8c20e29834a40e39676bea8a5ddfe" upstream="trident-rom"/>
+  <project name="device/common" revision="44f3e76431cd7ab8d546d4eac9fccd391f28bc15" upstream="trident-rom"/>
+  <project name="device/generic/arm64" revision="392eec3cb4c64721cd5b76fa36535954b5d45309" upstream="trident-rom"/>
+  <project name="device/generic/armv7-a-neon" revision="d86e5c5d2bc5cabb347b3da718e9fc7d185a6503" upstream="trident-rom"/>
+  <project name="device/generic/car" revision="a00c93a19344fe3767a70955d343d15c752ba748" upstream="trident-rom"/>
+  <project name="device/generic/common" revision="0e223f6a92e0aeff235c2d29d067a23087ca91b0" upstream="trident-rom"/>
+  <project name="device/generic/goldfish" revision="887b6a11de4e65be24474268bd7720c863c2c59d" upstream="trident-rom"/>
+  <project name="device/generic/goldfish-opengl" revision="f878f4c269a24848295a3427232329be01c23ed5" upstream="trident-rom"/>
+  <project name="device/generic/mini-emulator-arm64" revision="51b846f25228225430f8c67b2db42edae89a1a51" upstream="trident-rom"/>
+  <project name="device/generic/mini-emulator-armv7-a-neon" revision="258706fc0ddcf2c9be48967f4766ec90efb736a5" upstream="trident-rom"/>
+  <project name="device/generic/mini-emulator-x86" revision="65d59e2be2cfd713513a05d80a0f75794ab60579" upstream="trident-rom"/>
+  <project name="device/generic/mini-emulator-x86_64" revision="d57c0a07e17a7e1cb9067681716bfdcdecdf22e7" upstream="trident-rom"/>
+  <project name="device/generic/qemu" revision="97ef4f962aec451b00bfe562c1cb67471c4563d9" upstream="trident-rom"/>
+  <project name="device/generic/uml" revision="6ee9221ffa7078f1f3f4dca1bcfeeedcfedeb303" upstream="trident-rom"/>
+  <project name="device/generic/x86" revision="6e7600e63feb6f5011ef4040e22206400119e493" upstream="trident-rom"/>
+  <project name="device/generic/x86_64" revision="734d9d725e200acf7dcb779896955299b86ebb86" upstream="trident-rom"/>
+  <project name="device/google/accessory/arduino" revision="abc5159a3ca9dbb5c7e364a1eab99901a4440ac5" upstream="trident-rom"/>
+  <project name="device/google/accessory/demokit" revision="7dfe7f89a3b174709c773fe319531006e46440d9" upstream="trident-rom"/>
+  <project name="device/google/atv" revision="fe24d2cbe6b0fca07e8da1773ab8aa967a32d227" upstream="trident-rom"/>
+  <project name="device/google/contexthub" revision="9369db1ceb43f2fbd5e0afe3d0531d0cfa74c98c" upstream="trident-rom"/>
+  <project name="device/google/vrservices" revision="7cd849f396995cf8a3659024f0f0894e25bc735d" upstream="trident-rom"/>
+  <project name="device/qcom/common" revision="bf5045800cec4dcdc3d62080143d1d7ed0c44581" upstream="trident-rom">
+    <copyfile dest="build.sh" src="build.sh"/>
+    <copyfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+    <copyfile dest="kernel/Android.mk" src="stop_scan.mk"/>
+    <copyfile dest="disregard/Android.mk" src="stop_scan.mk"/>
+  </project>
+  <project name="device/qcom/sepolicy" revision="85c60ac55770e7b8c4e41829b7b3ad0da782e028" upstream="trident-rom"/>
+  <project name="device/qcom/trident" revision="4c6bf5564109617cf676830a041de1de6fd61237" upstream="trident-rom"/>
+  <project name="device/qcom/trident_cmel" revision="de8edf8e682d4ffcfac89a6fec36a1913a12c7e3" upstream="trident-rom"/>
+  <project name="device/qcom/trident_common" revision="e87624cdbe7f66e5e9c0c6c497c15e43b7928d40" upstream="trident-rom"/>
+  <project name="device/sample" revision="373ff40941e4d8d17f07345703d85ba825cb4a61" upstream="trident-rom"/>
+  <project name="external/eventbus" remote="smartisanos" revision="17a4804b21d659fe390e8c08556e24068c20d41b" upstream="master"/>
+  <project name="external/ffmpeg" remote="smartisanos" revision="1095ab1cc0cf65b3df3374fdad251ad5b8994490" upstream="master"/>
+  <project name="external/smartisan-mm" remote="smartisanos" revision="4d36c3d55b2883a979f2627333f439b9d48b6798" upstream="master"/>
+  <project name="external/touchsense" remote="smartisanos" revision="7dd0ebd90c77a279893a61a15a254387a10e6698" upstream="master"/>
+  <project name="external/usbcamera" remote="smartisanos" revision="4db7b71781bf04e2966fce7cb4fe6aacb1ce1c83" upstream="trident-rom"/>
+  <project name="frameworks/base-ex" remote="smartisanos" revision="cb0636b45a50a58582d2879bbdad3fa9cd429e52" upstream="master"/>
+  <project name="github/libraw" path="external/libraw" remote="smartisanos" revision="6be8ea660b2bb13a8995c623056e65b151af74a0" upstream="master"/>
+  <project name="github/phoneloc" path="external/phoneloc" remote="smartisanos" revision="f98a0878185d416b93441968e19020c48976d2e0" upstream="surabaya-rom"/>
+  <project name="github/tiff" path="external/tiff" remote="smartisanos" revision="8ce44f1dd6f87a8f87273a4d247ed059934f43d5" upstream="master"/>
+  <project name="kernel/msm-4.9" path="kernel" revision="ab383f10e13da3e3e31449f191688e8b16e8364e" upstream="trident-rom"/>
+  <project name="oem/flashing-files" path="flashing-files" revision="0ec9f6f5a3c16934fd879cf660dbecaadbfeec73" upstream="trident-rom"/>
+  <project name="oem/oem-release-trident" path="oem-release" revision="b43f2cf4615e0a234760d29c4a1925855fc7a9c5" upstream="smandroid/trident-sdm845-r00058.1"/>
+  <project groups="notdefault,sos-app2" name="package/apps/Tpassword" path="packages/apps/Tpassword" remote="smartisanos" revision="824e1726c5a45a12ba47af764ca0dbe9709d899a" upstream="master"/>
+  <project groups="notdefault,sos-app3" name="packages/apps/AppStoreCommon" remote="smartisanos" revision="5660bc4be59a52269be776c619245f9b405b6082" upstream="master"/>
+  <project groups="notdefault,sos-app3" name="packages/apps/AppStoreSmartisan" remote="smartisanos" revision="9f1b1dd4bc2b04dd49d293b56b2eb97c84f7340e" upstream="master"/>
+  <project name="packages/apps/AudioEffectSmartisan" remote="smartisanos" revision="757571e05e1884b84e2424a4e3df93f2e9def201" upstream="master"/>
+  <project name="packages/apps/AutoRegistrationSmartisan" remote="smartisanos" revision="42feb32ea776b598b075ce1c60e02dbecfd59c5d" upstream="master"/>
+  <project name="packages/apps/Backup" remote="smartisanos" revision="714a96cf5693dd32c5f933f9f0c80e06f28a64e5" upstream="master"/>
+  <project name="packages/apps/BrowserChrome" remote="smartisanos" revision="592bf4a9ab6024cd6f7b1083e0cb7dec6b03ad60" upstream="chromium-v62"/>
+  <project name="packages/apps/CalculatorSmartisan" remote="smartisanos" revision="ee1f41f3da610bd3ba2ae58eeeb1ce3b924713b4" upstream="master"/>
+  <project name="packages/apps/CameraSmartisan" remote="smartisanos" revision="3efe6d7ab65cde23b9be6d11e9d1ce2de6598b18" upstream="trident-rom"/>
+  <project name="packages/apps/CleanerSmartisan" remote="smartisanos" revision="ed22b9f36eb0a1550668f86630dddd8a0abad0f6" upstream="master"/>
+  <project name="packages/apps/ClockSmartisan" remote="smartisanos" revision="2cace98f84a7a45336b8e211d9b82faa8c8b57f3" upstream="master"/>
+  <project name="packages/apps/CloudGallerySmartisan" remote="smartisanos" revision="2b51f89364664e70a9e007ca4caa1bc14e603d7b" upstream="master"/>
+  <project groups="notdefault,sos-app3" name="packages/apps/CloudServiceShare" remote="smartisanos" revision="e5d0614a9e5896a40e3c7ca089bbec72499861e6" upstream="master"/>
+  <project groups="notdefault,sos-app3" name="packages/apps/CloudServiceSmartisan" remote="smartisanos" revision="770dd43cd4cd4d1c01a1afa4176dc8d2dca5f8cb" upstream="master"/>
+  <project groups="notdefault,sos-app3" name="packages/apps/CloudSyncAgent" remote="smartisanos" revision="7acce98f5c1a4fbd8425803255212718d6152d78" upstream="master"/>
+  <project name="packages/apps/CompassSmartisan" remote="smartisanos" revision="79bda0e91e499e42dc131fda15b7db24ed588c53" upstream="master"/>
+  <project name="packages/apps/CrashMonitor" remote="smartisanos" revision="d67c07d352631e0505a22948a106cf831be93e5b" upstream="master"/>
+  <project name="packages/apps/CrashReport" remote="smartisanos" revision="f96316c667748afd9dccdd9e312c8afc2d4f5065" upstream="master"/>
+  <project groups="notdefault,sos-fw" name="packages/apps/Desktop" remote="smartisanos" revision="f721bd3156c49100badf5a552b8cca74ec2ad3f6" upstream="master"/>
+  <project name="packages/apps/DesktopSystemUI" remote="smartisanos" revision="4df6c3a145358c76fb66511cb866a241a1b833f1" upstream="master"/>
+  <project name="packages/apps/DriveKit" remote="smartisanos" revision="ee60b51f2ea0a9676d021d2240648e4a783b4808" upstream="master"/>
+  <project name="packages/apps/Email2" path="packages/apps/EmailSmartisan" remote="smartisanos" revision="4e14a71292c40a498da03183fc25bdf568abf226" upstream="master"/>
+  <project name="packages/apps/ExtendScreenSmartisan" remote="smartisanos" revision="24f24cf2784acf2fdecbed90b93d29db6e8acc30" upstream="trident-rom"/>
+  <project name="packages/apps/FMRadioSmartisan" remote="smartisanos" revision="b159bd9d7bb999b1c0362ecc4bd1d245fa27b67d" upstream="odin-rom"/>
+  <project name="packages/apps/FaceRecognition" remote="smartisanos" revision="aa5eaface0da74104db75d1976d4df77ad3e7381" upstream="master"/>
+  <project name="packages/apps/FileCommonSmartisan" remote="smartisanos" revision="95383b26277709dc2ab8a59f856e8ccdfe5a1f36" upstream="master"/>
+  <project name="packages/apps/FileManagerSmartisan" remote="smartisanos" revision="8a31d60aaebe6bbba700541c851efd8c2d482c78" upstream="master"/>
+  <project name="packages/apps/FilePreviewSmartisan" remote="smartisanos" revision="5d967a6c3e65e57d6f6e77087de1cd8e0ed9ce36" upstream="master"/>
+  <project name="packages/apps/GalleryCommon" remote="smartisanos" revision="e4c8dcf2ed96a19a76c5d0bffa2399f872f8be3e" upstream="master"/>
+  <project name="packages/apps/GameSpeedUp" remote="smartisanos" revision="1be048f965a12359574b52065a8eb855cb16ec54" upstream="master"/>
+  <project groups="notdefault,sos-app3" name="packages/apps/GameStoreSmartisan" remote="smartisanos" revision="9ceb754bfaae8ac56b558f741a28192cfd7919e2" upstream="master"/>
+  <project name="packages/apps/GoogleInstaller" remote="smartisanos" revision="b949ece905087a3da8304439b588a096ce3bdd22" upstream="master"/>
+  <project name="packages/apps/HandInHand" remote="smartisanos" revision="35a632f78b21e7d8c9564683e4e8b794d44ec362" upstream="master"/>
+  <project name="packages/apps/IdeaPills" remote="smartisanos" revision="e779a47c94b660d95d0b36ce31cc9cea5cb5236d" upstream="master"/>
+  <project name="packages/apps/IdeaPillsCommon" remote="smartisanos" revision="f7ecb981468f859178d49855af63277634abe8bf" upstream="master"/>
+  <project name="packages/apps/InCallUISmartisan" remote="smartisanos" revision="03ff3b809ae8c269fe4ff8735c806961e998a7dd" upstream="trident-rom"/>
+  <project name="packages/apps/KeyguardSmartisan" remote="smartisanos" revision="2ebad63c47dfcd89acc4ae7200f708dbc06cd4a6" upstream="master"/>
+  <project groups="notdefault,sos-fw" name="packages/apps/LaucherSmartisanNew" path="packages/apps/LauncherSmartisanNew" remote="smartisanos" revision="2db5bfbb78846fd68ce4c8807fc4cdd6bc643479" upstream="master"/>
+  <project name="packages/apps/LauncherOrigSmartisan" remote="smartisanos" revision="9b64c8cd09d73895b700958fc12dadd0e702ec61" upstream="master"/>
+  <project name="packages/apps/MusicPlayer" remote="smartisanos" revision="4344e7fbadb1c0ade59c13f6b9256dd8aabeee2e" upstream="master"/>
+  <project name="packages/apps/MusicShare" remote="smartisanos" revision="2b7c015bd75246c7d4c67736760d8215f1cc7913" upstream="master"/>
+  <project name="packages/apps/NoDisturb" remote="smartisanos" revision="8ea567af6046a2bc67a9abfab85674a7c6ace5d9" upstream="master"/>
+  <project name="packages/apps/NotesSmartisan" remote="smartisanos" revision="3de620af75286ed3072febd9c5be31a48018e92c" upstream="master"/>
+  <project name="packages/apps/PackageInstallerSmartisan" remote="smartisanos" revision="a3ce4a84db52b594f45b1947ab111965281bc563" upstream="odin-rom"/>
+  <project name="packages/apps/PermissionManager" remote="smartisanos" revision="08eeb77f6e8b4b5723b01bb2444b022650bc2b8f" upstream="master"/>
+  <project name="packages/apps/PerspectiveClient" remote="smartisanos" revision="dbcc960384f074d3c541365eb727b9fc23e46054" upstream="master"/>
+  <project name="packages/apps/PhoneNumberAssistant" remote="smartisanos" revision="b99df82f62f36bf8c21261ee6b6b2883e21ae4da" upstream="master"/>
+  <project name="packages/apps/PowerSavingLauncher" remote="smartisanos" revision="a23c82d2b13b6632efce5ec62492fa65b326e007" upstream="master"/>
+  <project name="packages/apps/PrebuiltAPKSmartisan" remote="smartisanos" revision="98828a87969364999ab1c7b741dbc7ea426d06e0" upstream="master"/>
+  <project name="packages/apps/RechargeSmartisan" remote="smartisanos" revision="86eaa163cc6cbe797e37e100f9e13124eb17ee14" upstream="master"/>
+  <project name="packages/apps/SMTBugreport" remote="smartisanos" revision="816e2a1067c76a0134c7a987c8756c848654e7b6" upstream="master"/>
+  <project name="packages/apps/SanBox" remote="smartisanos" revision="771d9ee718b79aa0df6dae489d70eee99c271d84" upstream="master"/>
+  <project name="packages/apps/ScreenRecorderSmartisan" remote="smartisanos" revision="6d0615cd1fd96d151f40fc1b3da3f6c580608e3a" upstream="master"/>
+  <project name="packages/apps/SetupWizard" remote="smartisanos" revision="e3665eba4194aa1fc3a45f439c200d96217365ac" upstream="master"/>
+  <project name="packages/apps/Sidebar" remote="smartisanos" revision="58f583b8c08232e59ae125a7ac5c8cdd9dc108e1" upstream="master"/>
+  <project name="packages/apps/SmartisanAuthorizer" remote="smartisanos" revision="e0b4cbbfd899fe8b64a0f263d2efecad10e0e7d5" upstream="master"/>
+  <project name="packages/apps/SmartisanBrain" remote="smartisanos" revision="d4d0b58327a6507823459645eae548997283ba8f" upstream="master"/>
+  <project name="packages/apps/SmartisanDesktopDock" remote="smartisanos" revision="dca8ea9c5e21ba36d75e146088f9c499e2525c19" upstream="master"/>
+  <project name="packages/apps/SmartisanLauncherThemes" remote="smartisanos" revision="bee5f18349e78b9ce00a42e72b31fcec86d9acff" upstream="master"/>
+  <project name="packages/apps/SmartisanManual" remote="smartisanos" revision="82faee405c340e3b4982875dc735ccaed0a8dd34" upstream="master"/>
+  <project name="packages/apps/SmartisanOSTheme" remote="smartisanos" revision="ab15b820557dd970927a475c156a7f56e41b6abe" upstream="master"/>
+  <project name="packages/apps/SmartisanShareBrowser" remote="smartisanos" revision="148062c3096bb6ca5b15bf18367baf8045db2812" upstream="master"/>
+  <project name="packages/apps/SmartisanShareManual" remote="smartisanos" revision="1538d880247c3ed5929ba66333ce2b8fa7d9650c" upstream="master"/>
+  <project name="packages/apps/SmartisanSupport" remote="smartisanos" revision="4f1b2154e3fd899d0a60c9f51f8f773d63d30d1b" upstream="master"/>
+  <project name="packages/apps/SmartisanosSamples" remote="smartisanos" revision="beaef13376993f95fe70a61c8417cf9b7aefd81e" upstream="master"/>
+  <project name="packages/apps/SoftSim" remote="smartisanos" revision="3e2b9b36de3efc94c5791c224834c1e286747d58" upstream="master"/>
+  <project name="packages/apps/SoundRecorder" path="packages/apps/SoundRecorderSmartisan" remote="smartisanos" revision="9abe9a0314948553f13b819ea9a5b7029574f898" upstream="master"/>
+  <project name="packages/apps/StoreSelectorSmartisan" remote="smartisanos" revision="376b627402d8aa51054382a611e273974abdf2b8" upstream="master"/>
+  <project name="packages/apps/SystemUI" remote="smartisanos" revision="37b2b16df8cb1b535d5a0eff5139522b09af849b" upstream="trident-rom"/>
+  <project name="packages/apps/SystemUISmartisan" remote="smartisanos" revision="2b0cb0b8b90a3cccbd78d8a86022cc6700810fa4" upstream="trident-rom"/>
+  <project name="packages/apps/TableSetupWizard" remote="smartisanos" revision="17996f9935f1d3075d1e877d64ee01f2701939c2" upstream="master"/>
+  <project name="packages/apps/TextBoom" remote="smartisanos" revision="0dfd5ea197b3444f4cc9d85ea91d7f19e9208ac7" upstream="master"/>
+  <project name="packages/apps/TorchSmartisan" remote="smartisanos" revision="3c5aadd404db6e75bdc6b5d3d5b3bd2af919348a" upstream="master"/>
+  <project name="packages/apps/TrackerSmartisan" remote="smartisanos" revision="5cce85945f2f5f787d569e10dbae3ffcbb5e9d52" upstream="master"/>
+  <project name="packages/apps/UnifiedEmail" path="packages/apps/UnifiedEmailSmartisan" remote="smartisanos" revision="9dd3f569e0124cbd60d09c9979ab721ab2ec65f5" upstream="master"/>
+  <project name="packages/apps/VoiceAssistant" remote="smartisanos" revision="be1b8ca0dcd446aaf1f6a44b19fedd433b1fbb12" upstream="master"/>
+  <project groups="notdefault,sos-app3" name="packages/apps/WalletSmartisan" remote="smartisanos" revision="f08414adbcae4c4d081b967c0d30c5b11b12728a" upstream="master"/>
+  <project name="packages/apps/WapiCertManage" remote="smartisanos" revision="90070e70c0b04dfd9e28669945923b9f84d9e143" upstream="trident-rom"/>
+  <project name="packages/apps/WapiCertStore" remote="smartisanos" revision="57471cdaaeeb556c4e020a5a7f94361a718081df" upstream="trident-rom"/>
+  <project name="packages/apps/WeatherSmartisan" remote="smartisanos" revision="29bf996b364cb52967a342e82751561bd67f61a1" upstream="master"/>
+  <project name="packages/apps/WifiAuthorize" remote="smartisanos" revision="dcf3660836dc13824edefdbd3066e443e1ea1ea5" upstream="master"/>
+  <project name="packages/inputmethods/IMESmartisan" remote="smartisanos" revision="9b97487a61838a4a6efc55c4a486ace82fd21288" upstream="master"/>
+  <project name="packages/providers/FullTextSearchProvider" remote="smartisanos" revision="3c3d0648a338583300bec31982375dcb5a93eb70" upstream="master"/>
+  <project name="packages/providers/WeatherProvider" remote="smartisanos" revision="4e9884f9a13f00d53b865d7ad0f55f2d3bb7bc53" upstream="master"/>
+  <project name="packages/services/SmartisanExpandService" remote="smartisanos" revision="39a5864685f40cf0a26ff0ecf7e0b6888974407d" upstream="master"/>
+  <project name="packages/services/TelecommSmartisan" remote="smartisanos" revision="961b726095682a567c7a507f154a8d26ffcb215b" upstream="trident-rom"/>
+  <project name="packages/services/TelephonySmartisan" remote="smartisanos" revision="1624b5c3bc20e3e90f8fc75a3cf7b45211a7502c" upstream="trident-rom"/>
+  <project name="packages/services/ThirdPartyLibs/IntelligentWords" remote="smartisanos" revision="4e25a6b8ff80df6e5d3b627682d8a7bb6246e423" upstream="master"/>
+  <project name="packages/services/ThirdPartyLibs/Payment" remote="smartisanos" revision="c258ffa2c7b9cfcb9bfba7eb8519a1a299b2245f" upstream="master"/>
+  <project name="packages/services/ThirdPartyLibs/SmartWord" remote="smartisanos" revision="10afded3a74963dfeee1782a06fbf7e8fcd5e1ce" upstream="master"/>
+  <project name="packages/services/ThirdPartyLibs/TextParticiple" remote="smartisanos" revision="9745a9e0bb223bf5c1a38f8ac0d1cd51ecd2f2a9" upstream="master"/>
+  <project name="packages/services/TmServiceSmartisan" remote="smartisanos" revision="2baef4126a0837572f40813bcf1b6e9ad5307d42" upstream="master"/>
+  <project name="packages/services/VoiceAssistantService" remote="smartisanos" revision="a8e711af85b1aaace5bd707a2901dbf6dcea0cb5" upstream="master"/>
+  <project name="platform/art" path="art" revision="4f35b5138aa1817780aaf54740f3bde80eef9a63" upstream="trident-rom"/>
+  <project name="platform/bionic" path="bionic" revision="01abec2136f52ac59005659f1a3841549cd4c44a" upstream="trident-rom"/>
+  <project name="platform/bootable/recovery" path="bootable/recovery" revision="f95fd2eafea2289b88fc37d307933a75d2c40f50" upstream="trident-rom"/>
+  <project name="platform/build" path="build/make" revision="ba1a6ea0661988427ffbba0483aebc4fef788d1e" upstream="trident-rom">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
+    <linkfile dest="build/core" src="core"/>
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh"/>
+    <linkfile dest="build/target" src="target"/>
+    <linkfile dest="build/tools" src="tools"/>
+  </project>
+  <project name="platform/build/blueprint" path="build/blueprint" revision="70ae58a8b5527bc116b4d1603ad798482882ac89" upstream="trident-rom"/>
+  <project name="platform/build/kati" path="build/kati" revision="76918caacd8d8dba3eead3a58d85c3d95f49fdb0" upstream="trident-rom"/>
+  <project name="platform/build/soong" path="build/soong" revision="9cf1b2993815d3aa14d68def6da93f00a597b968" upstream="trident-rom">
+    <linkfile dest="Android.bp" src="root.bp"/>
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+  </project>
+  <project name="platform/compatibility/cdd" path="compatibility/cdd" revision="70c77e25eabef4b774b503f29aa2a505a46897ff" upstream="trident-rom"/>
+  <project name="platform/cts" path="cts" revision="5f7076ebaeb87f12d0854a89209d0fda9e3d83ba" upstream="trident-rom"/>
+  <project name="platform/dalvik" path="dalvik" revision="e134902ce29f3b6d31b34dbb1379962afeee1b16" upstream="trident-rom"/>
+  <project name="platform/developers/build" path="developers/build" revision="ea26741e652520a5cbcda8a608939f8ca3980afc" upstream="trident-rom"/>
+  <project name="platform/developers/demos" path="developers/demos" revision="0c26d2e66f1a4da8eda2c23e41a5045a0695fe06" upstream="trident-rom"/>
+  <project name="platform/developers/samples/android" path="developers/samples/android" revision="8cb79f3787bd82f2bfa7b55323cfd5c7969e923d" upstream="trident-rom"/>
+  <project name="platform/development" path="development" revision="5f2b8d0cee1ffae971410fd9d48bff753f0e626e" upstream="trident-rom"/>
+  <project name="platform/docs/source.android.com" path="docs/source.android.com" revision="5766cd3e8210e84584e0f7a8364ec1d13ec3062d" upstream="trident-rom"/>
+  <project name="platform/external/ImageMagick" path="external/ImageMagick" revision="aa6e4ff5986409f0892f6e9daee8111a30d7d468" upstream="trident-rom"/>
+  <project name="platform/external/Microsoft-GSL" path="external/Microsoft-GSL" revision="c7231a8b061cb44839292cf4de1aa2b8d3fc165f" upstream="trident-rom"/>
+  <project name="platform/external/aac" path="external/aac" revision="802a1ea38de198562735b81143d97c251241743a" upstream="trident-rom"/>
+  <project name="platform/external/abi-compliance-checker" path="external/abi-compliance-checker" revision="2cce41de7ef1c23f88acc611becf1431278f78e1" upstream="trident-rom"/>
+  <project name="platform/external/abi-dumper" path="external/abi-dumper" revision="cc46cfba951e4de6c50a8fddb058f32644319311" upstream="trident-rom"/>
+  <project name="platform/external/android-clat" path="external/android-clat" revision="1d845d1c4b82a3557b35e98e6522a1b5063c6431" upstream="trident-rom"/>
+  <project name="platform/external/androidplot" path="external/androidplot" revision="c66727ebf001607cee14521c35bc852b55fd9845" upstream="trident-rom"/>
+  <project name="platform/external/ant-glob" path="external/ant-glob" revision="a73228afa9540b9c5518d360c5ae630bb634f975" upstream="trident-rom"/>
+  <project name="platform/external/ant-wireless/ant_native" path="external/ant-wireless/ant_native" revision="4a2f6987e8717c8fe4776bdb06656801746e64b4" upstream="trident-rom"/>
+  <project name="platform/external/ant-wireless/ant_service" path="external/ant-wireless/ant_service" revision="b616838fc8c89085742a542d528e2fd55d679ef9" upstream="trident-rom"/>
+  <project name="platform/external/antlr" path="external/antlr" revision="dd5fa6d48b827c5d98b625adbc209f4a05567534" upstream="trident-rom"/>
+  <project name="platform/external/apache-commons-math" path="external/apache-commons-math" revision="18f62fca59d387e3c1ccd8f80087d9c9af40bcc8" upstream="trident-rom"/>
+  <project name="platform/external/apache-harmony" path="external/apache-harmony" revision="9733d7ddb11207483309740c8df6182e4163ad79" upstream="trident-rom"/>
+  <project name="platform/external/apache-http" path="external/apache-http" revision="fbfa53bcc8232559d7ff3b7ef48ad329057b2ae8" upstream="trident-rom"/>
+  <project name="platform/external/apache-xml" path="external/apache-xml" revision="31d7642eb8f37a9166db7f1c9e313ab651bdb8ba" upstream="trident-rom"/>
+  <project name="platform/external/archive-patcher" path="external/archive-patcher" revision="40b8a403ba0e5791ee99e2be12ac5dd2f9e314ea" upstream="trident-rom"/>
+  <project name="platform/external/arm-neon-tests" path="external/arm-neon-tests" revision="104e2a662ec8443e9a7603b22efbb3b86c1e7094" upstream="trident-rom"/>
+  <project name="platform/external/autotest" path="external/autotest" revision="bcf7573e28bc6a917166d313066021c46d604554" upstream="trident-rom"/>
+  <project name="platform/external/avb" path="external/avb" revision="6ef1490a2cfbdd35448e11381a2ac66d85a69e7c" upstream="trident-rom"/>
+  <project name="platform/external/avenhancements" path="external/avenhancements" revision="411e2746514a4e7f21be44fb2907bf1555bf4727" upstream="trident-rom"/>
+  <project name="platform/external/bart" path="external/bart" revision="232e1a3fdc810f60aedda0e58cd95e47296e0335" upstream="trident-rom"/>
+  <project name="platform/external/bison" path="external/bison" revision="7467d52af437dd3dfea237a6865ab84bf258dee0" upstream="trident-rom"/>
+  <project name="platform/external/blktrace" path="external/blktrace" revision="d345431f16b8f76f30a58193ff2b26d5853e1109" upstream="trident-rom"/>
+  <project name="platform/external/boringssl" path="external/boringssl" revision="62879cca4ae93df2754313b018153a6e4b281403" upstream="trident-rom"/>
+  <project name="platform/external/bouncycastle" path="external/bouncycastle" revision="69e46230e5e3928a424b55ead563f02c47b29249" upstream="trident-rom"/>
+  <project name="platform/external/brctl" path="external/brctl" revision="85130b403dea07b2230efed3287236fa0caefb1c" upstream="trident-rom"/>
+  <project name="platform/external/brotli" path="external/brotli" revision="57de5cc4288565a9c3a7af978ef15f0abf0ada1b" upstream="trident-rom"/>
+  <project name="platform/external/bsdiff" path="external/bsdiff" revision="5841e70c640954a5530fae53be90085d4b0f3743" upstream="trident-rom"/>
+  <project name="platform/external/bzip2" path="external/bzip2" revision="00452f17c9ff7a50b40a3ebe8efd3b327d428d9e" upstream="trident-rom"/>
+  <project name="platform/external/c-ares" path="external/c-ares" revision="9f1b2827cb88c58a80c470a4bddb2485677ec57f" upstream="trident-rom"/>
+  <project name="platform/external/caliper" path="external/caliper" revision="c5af418e69ea901340b15e7639689e7aaf6aa8be" upstream="trident-rom"/>
+  <project name="platform/external/cblas" path="external/cblas" revision="5bd46f566a31694a7e442d091c23230003ecbb05" upstream="trident-rom"/>
+  <project name="platform/external/chromium-libpac" path="external/chromium-libpac" revision="81f0454bdf0d18be154fd9ba7d2c955473221150" upstream="trident-rom"/>
+  <project name="platform/external/chromium-trace" path="external/chromium-trace" revision="55352304872de77f7e9d852b02079b649d5df339" upstream="trident-rom"/>
+  <project name="platform/external/chromium-webview" path="external/chromium-webview" revision="fe5feab17c50c4cc9ca4da3e1bcc7180734c1b3d" upstream="chromium-v62"/>
+  <project name="platform/external/clang" path="external/clang" revision="335aac8915e1f1a2759ea0642e9eaba3ffa5aaaa" upstream="trident-rom"/>
+  <project name="platform/external/cmockery" path="external/cmockery" revision="9199c7bfafefea32d1884182fa655b6e4578c1c4" upstream="trident-rom"/>
+  <project name="platform/external/compiler-rt" path="external/compiler-rt" revision="f71d5a1e1b9ed044d4c898eded6be596da8ab0c2" upstream="trident-rom"/>
+  <project name="platform/external/conscrypt" path="external/conscrypt" revision="ac409a8ba75dbaaaa0a15bc279e5a1a837f5db28" upstream="trident-rom"/>
+  <project name="platform/external/crcalc" path="external/crcalc" revision="5559610bea3b267abef3273868f2d6b8c01409a5" upstream="trident-rom"/>
+  <project name="platform/external/cros/system_api" path="external/cros/system_api" revision="e7a696e0ee9944ed085e54cc78ad60a6c08af9f0" upstream="trident-rom"/>
+  <project name="platform/external/curl" path="external/curl" revision="6f701ed77cb3185e617cdb4b1132bfd2b0ea3be0" upstream="trident-rom"/>
+  <project name="platform/external/dagger2" path="external/dagger2" revision="0dad4e3dfc35cdb39e2ceffb7315471765811c89" upstream="trident-rom"/>
+  <project name="platform/external/deqp" path="external/deqp" revision="7c7c548a33f5c681b94d2d500ad841d4269367ae" upstream="trident-rom"/>
+  <project name="platform/external/desugar" path="external/desugar" revision="d3f7a8a8e80e63349784e2bffc4d827d7769fa83" upstream="trident-rom"/>
+  <project name="platform/external/devlib" path="external/devlib" revision="0d8ffa979098c9e1bf8eb0f1c76cfbd5df1324cc" upstream="trident-rom"/>
+  <project name="platform/external/dexmaker" path="external/dexmaker" revision="e79601d0a4d8347aadd0bc8e9deb397588bf9d4d" upstream="trident-rom"/>
+  <project name="platform/external/dhcpcd-6.8.2" path="external/dhcpcd-6.8.2" revision="b3e401ad788d3a42a9c7de524becfb665ec7b166" upstream="trident-rom"/>
+  <project name="platform/external/dlmalloc" path="external/dlmalloc" revision="6661f3ca66b55d8f5a57b96fec97efaf8f3897a5" upstream="trident-rom"/>
+  <project name="platform/external/dng_sdk" path="external/dng_sdk" revision="2867e21dc6c826846aa0aaceb4df7474bb7dbb4d" upstream="trident-rom"/>
+  <project name="platform/external/dnsmasq" path="external/dnsmasq" revision="a7646dd1a19ae183e9be30b5ea430edbcfadc5c2" upstream="trident-rom"/>
+  <project name="platform/external/doclava" path="external/doclava" revision="6540a489694973695ae09f5b9a699852a2b23bd0" upstream="trident-rom"/>
+  <project name="platform/external/donuts" path="external/donuts" revision="005389fb31a67841b5de42f0d25fbfab843e208c" upstream="trident-rom"/>
+  <project name="platform/external/drm_gralloc" path="external/drm_gralloc" revision="f2936dc85a5f92d4dcdfa7b46066c9cd64086720" upstream="trident-rom"/>
+  <project name="platform/external/drm_hwcomposer" path="external/drm_hwcomposer" revision="38e84e747804f4e51bdc10367c642ffe3eb78f48" upstream="trident-rom"/>
+  <project name="platform/external/droiddriver" path="external/droiddriver" revision="9c529227d3b7c8b2e8e1066a9d8ce325d0016713" upstream="trident-rom"/>
+  <project name="platform/external/drrickorang" path="external/drrickorang" revision="23d02aa32f580d03680aa8f0a62afbb4c915e669" upstream="trident-rom"/>
+  <project name="platform/external/dtc" path="external/dtc" revision="d24848ebae08bede516bfbed8e6d885665849bd5" upstream="trident-rom"/>
+  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" revision="1565f4f8e72ee58bce522c2a3ec99e5f86062548" upstream="trident-rom"/>
+  <project name="platform/external/easymock" path="external/easymock" revision="eebaf1b32b478e5b6c610c23452c0bb32d14c207" upstream="trident-rom"/>
+  <project name="platform/external/ebtables" path="external/ebtables" revision="3f430ac843caa90f25c5b4f695cf350beadec671" upstream="trident-rom"/>
+  <project name="platform/external/eclipse-basebuilder" path="external/eclipse-basebuilder" revision="076f46888ed346775b8efc564d7694063ef5eea7" upstream="trident-rom"/>
+  <project name="platform/external/eclipse-windowbuilder" path="external/eclipse-windowbuilder" revision="c533332008088ee5f61745b724361fbde5b7e770" upstream="trident-rom"/>
+  <project name="platform/external/eigen" path="external/eigen" revision="4cc30c3e144f1fdc217fcf29d2531f9a7b5139c1" upstream="trident-rom"/>
+  <project name="platform/external/elfutils" path="external/elfutils" revision="f1f212563ee672a1eca4238a5cc6ff1e969ec071" upstream="trident-rom"/>
+  <project name="platform/external/emma" path="external/emma" revision="deb5711b2635ee9d332605e2e00b63b32bed6777" upstream="trident-rom"/>
+  <project name="platform/external/esd" path="external/esd" revision="943c42b6f8e9afe821744aa4c039f4943ebf29f5" upstream="trident-rom"/>
+  <project groups="pdk" name="platform/external/exfat-fuse" path="external/exfat-fuse" revision="811f5799e265fb9b673627c115b2e3ea8be5966b" upstream="osborn-rom"/>
+  <project name="platform/external/expat" path="external/expat" revision="20903578e5fa11151bfa14ce28d4f6834fc711b1" upstream="trident-rom"/>
+  <project name="platform/external/eyes-free" path="external/eyes-free" revision="16bd4c7a4d1bfe229068b637614dad7c48dd2ceb" upstream="trident-rom"/>
+  <project name="platform/external/f2fs-tools" path="external/f2fs-tools" revision="2c2e572803951401e33eb6bda2f6c9dc2ae60247" upstream="trident-rom"/>
+  <project name="platform/external/fdlibm" path="external/fdlibm" revision="fcd17254a9e59ceb0420d4a2faf29db6b004c443" upstream="trident-rom"/>
+  <project name="platform/external/fec" path="external/fec" revision="4342555427f5bb0788dfacd1eb07d2876afab733" upstream="trident-rom"/>
+  <project name="platform/external/fio" path="external/fio" revision="829a57fb8ccc0af1f05507759fb84cf0c8175f72" upstream="trident-rom"/>
+  <project name="platform/external/flac" path="external/flac" revision="f44bab24e1347b0b943d25a16ff00f58a9536de5" upstream="trident-rom"/>
+  <project name="platform/external/flatbuffers" path="external/flatbuffers" revision="83d6225e9b642ea069023e45a943d3e7f916fb62" upstream="trident-rom"/>
+  <project name="platform/external/fmtlib" path="external/fmtlib" revision="f4d6768e2595b881a146e41e275f77203db9bc56" upstream="trident-rom"/>
+  <project name="platform/external/fonttools" path="external/fonttools" revision="fede58680958e96e6e8f61c3cc6282f798452c53" upstream="trident-rom"/>
+  <project name="platform/external/freetype" path="external/freetype" revision="394fc188bfdb31e7df63e784e32464de7e0bf90e" upstream="trident-rom"/>
+  <project name="platform/external/fsck_msdos" path="external/fsck_msdos" revision="4103a4ab7d45b439b4f7297a2129a1ca45ec91dd" upstream="trident-rom"/>
+  <project name="platform/external/gemmlowp" path="external/gemmlowp" revision="ecd43744fc61fea6f5504540c5c26d469d4d3c5c" upstream="trident-rom"/>
+  <project name="platform/external/giflib" path="external/giflib" revision="d64fa854793e1c85c235faae7035fabeea972222" upstream="trident-rom"/>
+  <project name="platform/external/glide" path="external/glide" revision="273410a3b8c0f36af5ab3af1de5961ba35ec5778" upstream="trident-rom"/>
+  <project name="platform/external/google-api-services-storage" path="external/google-api-services-storage" revision="29b36ffc866ec32ea01f92ab55100f16bb4b2157" upstream="trident-rom"/>
+  <project name="platform/external/google-benchmark" path="external/google-benchmark" revision="d719874d9e539b8bf59b4dc95976b1fd0ac293cf" upstream="trident-rom"/>
+  <project name="platform/external/google-breakpad" path="external/google-breakpad" revision="5702aec91e04d86b7e850d00243b6b9035b5923c" upstream="trident-rom"/>
+  <project name="platform/external/google-fonts/carrois-gothic-sc" path="external/google-fonts/carrois-gothic-sc" revision="0062a10458d4c357f3082d66bcb129d11913aaae" upstream="trident-rom"/>
+  <project name="platform/external/google-fonts/coming-soon" path="external/google-fonts/coming-soon" revision="2c5cb418c690815545bbb0316eae5fd33b9fc859" upstream="trident-rom"/>
+  <project name="platform/external/google-fonts/cutive-mono" path="external/google-fonts/cutive-mono" revision="bce2136662854076023066602526ba299e6556b2" upstream="trident-rom"/>
+  <project name="platform/external/google-fonts/dancing-script" path="external/google-fonts/dancing-script" revision="7b6623bd54cee3e48ae8a4f477f616366643cc78" upstream="trident-rom"/>
+  <project name="platform/external/google-tv-pairing-protocol" path="external/google-tv-pairing-protocol" revision="d6c0476029d7a62bb9fbfd08a8a47c9188432864" upstream="trident-rom"/>
+  <project name="platform/external/googletest" path="external/googletest" revision="c906394684dc7773dd1d51da5f21149f6724f114" upstream="trident-rom"/>
+  <project name="platform/external/gptfdisk" path="external/gptfdisk" revision="dcd35b13d0de1bb7c8bc9a8c5f593021f252d6b5" upstream="trident-rom"/>
+  <project name="platform/external/guava" path="external/guava" revision="88e792c40b27a2ba6a84fde54c8890e97effd1bc" upstream="trident-rom"/>
+  <project name="platform/external/guice" path="external/guice" revision="c94f47512257b4ce1d748451161fe93445bf9c9a" upstream="trident-rom"/>
+  <project name="platform/external/hamcrest" path="external/hamcrest" revision="acdcb536f99925df6d73e2b1df0f9aac45682cb3" upstream="trident-rom"/>
+  <project name="platform/external/harfbuzz_ng" path="external/harfbuzz_ng" revision="bce6aa6b4a70e2e0a2ab36bf5aef009ea51dc025" upstream="trident-rom"/>
+  <project name="platform/external/hyphenation-patterns" path="external/hyphenation-patterns" revision="a6952998e20660eec965b60933cda39a48404d5e" upstream="trident-rom"/>
+  <project name="platform/external/icu" path="external/icu" revision="df8f714f17856b67042d5a9585b57960539be970" upstream="trident-rom"/>
+  <project name="platform/external/ims" path="external/ims" revision="df0a4ed981f785b85e3bf2b2630310674be7ecc9" upstream="trident-rom"/>
+  <project name="platform/external/iproute2" path="external/iproute2" revision="75a9b2151ab6da4e6e900b785447a1f99d7a73cb" upstream="trident-rom"/>
+  <project name="platform/external/ipsec-tools" path="external/ipsec-tools" revision="c4531e5b09403a9954213dfb18d0deaac5badc12" upstream="trident-rom"/>
+  <project name="platform/external/iptables" path="external/iptables" revision="764968027d6b0b95670c9609ca67d9aaedd7bbb8" upstream="trident-rom"/>
+  <project name="platform/external/iputils" path="external/iputils" revision="fa637dd511d01736e231ea6417577844300763a0" upstream="trident-rom"/>
+  <project name="platform/external/iw" path="external/iw" revision="1c37986b96ac3b1a204e69fc4a126586b9e4e536" upstream="trident-rom"/>
+  <project name="platform/external/jacoco" path="external/jacoco" revision="de17e9e2d921152a621e9c2259d8a56afe32ebbb" upstream="trident-rom"/>
+  <project name="platform/external/jarjar" path="external/jarjar" revision="4593d9eee793eb292ca641c80329e3197ce08ddb" upstream="trident-rom"/>
+  <project name="platform/external/javasqlite" path="external/javasqlite" revision="ee41d81872eedc632f42bd231b95bc945690d159" upstream="trident-rom"/>
+  <project name="platform/external/javassist" path="external/javassist" revision="f7c4b954072e563b75f6910c25bb689bbf38a3d1" upstream="trident-rom"/>
+  <project name="platform/external/jcommander" path="external/jcommander" revision="9a3ba316f5b73c3a19291b92534e990eec263e8b" upstream="trident-rom"/>
+  <project name="platform/external/jdiff" path="external/jdiff" revision="07d92bdaeeaac1e3c91b48226ca692bbcf3146b5" upstream="trident-rom"/>
+  <project name="platform/external/jemalloc" path="external/jemalloc" revision="b96c7bef7b58ed7bb0661febb5dcfb872cfbda9c" upstream="trident-rom"/>
+  <project name="platform/external/jline" path="external/jline" revision="74812032f8d8eddbef387f18c96de9e5c38b8fdb" upstream="trident-rom"/>
+  <project name="platform/external/jmdns" path="external/jmdns" revision="0c71647deb7f7835c473fd3dfb45943083e47794" upstream="trident-rom"/>
+  <project name="platform/external/jsilver" path="external/jsilver" revision="b9b84920ba47ddf7f15baa01c56b28e3d3f951ea" upstream="trident-rom"/>
+  <project name="platform/external/jsmn" path="external/jsmn" revision="f3db3a3e01dc80685f786c049f38cff6d2848430" upstream="trident-rom"/>
+  <project name="platform/external/json-c" path="external/json-c" revision="6442a2f9e74d070b39a66c60a6b14ae637a5ffde" upstream="trident-rom"/>
+  <project name="platform/external/jsoncpp" path="external/jsoncpp" revision="6fb0d5bdab0e6ed4bd233fb57fec1ad4bd2c9404" upstream="trident-rom"/>
+  <project name="platform/external/jsr305" path="external/jsr305" revision="3278bcfa33f28b1465f0b7212a2aeb855608b753" upstream="trident-rom"/>
+  <project name="platform/external/jsr330" path="external/jsr330" revision="d00e8235f22162768fbc8f17deb7abbcd30a94c5" upstream="trident-rom"/>
+  <project name="platform/external/junit" path="external/junit" revision="1955f1a352add6793ebb442ba60d6d2a3a282cb6" upstream="trident-rom"/>
+  <project name="platform/external/junit-params" path="external/junit-params" revision="7ce32acfc39e6f690e90ca3b5e5893e16be113cf" upstream="trident-rom"/>
+  <project name="platform/external/kernel-headers" path="external/kernel-headers" revision="85985e0265dfb32101798683d53029503214e5d2" upstream="trident-rom"/>
+  <project name="platform/external/kmod" path="external/kmod" revision="4082ee0d1ad5ce92c5ea6fdc5ca08e89cdd9801d" upstream="trident-rom"/>
+  <project name="platform/external/ksoap2" path="external/ksoap2" revision="9fdc4a6bb2b882bd1d6c822d2ad0c66585d66ba9" upstream="trident-rom"/>
+  <project name="platform/external/libavc" path="external/libavc" revision="8ca507bbc083fee63eeb8bc50f2b4a6437f09372" upstream="trident-rom"/>
+  <project name="platform/external/libbackup" path="external/libbackup" revision="a645153b0a97663636bacdc5527c0d304fa79657" upstream="trident-rom"/>
+  <project name="platform/external/libbrillo" path="external/libbrillo" revision="fead14b1403a604faad97c7f13b2f88ed41045b9" upstream="trident-rom"/>
+  <project name="platform/external/libcap" path="external/libcap" revision="3a4e07136e6d79ba5cfafb639f9ecc5ff76000d2" upstream="trident-rom"/>
+  <project name="platform/external/libcap-ng" path="external/libcap-ng" revision="835f318b9785a70415980fba96c34ee5c6b7e415" upstream="trident-rom"/>
+  <project name="platform/external/libchrome" path="external/libchrome" revision="b4b96cdfd447daac679b067c3b969cc5ed22a798" upstream="trident-rom"/>
+  <project name="platform/external/libconstrainedcrypto" path="external/libconstrainedcrypto" revision="6bf44d6ebfa08b5b9371c22e7dfd54a85bd98151" upstream="trident-rom"/>
+  <project name="platform/external/libcups" path="external/libcups" revision="9f55742e1f1cb73c983ed0157bd1cd743dafe0d5" upstream="trident-rom"/>
+  <project name="platform/external/libcxx" path="external/libcxx" revision="745fb8c75f668690b1a331766c69789fd807094e" upstream="trident-rom"/>
+  <project name="platform/external/libcxxabi" path="external/libcxxabi" revision="51cc19a7ee4706460be8a4bfb11b134b47957e2d" upstream="trident-rom"/>
+  <project name="platform/external/libdaemon" path="external/libdaemon" revision="e2f604066d97431c95856c73d7b9ee46b348d37e" upstream="trident-rom"/>
+  <project name="platform/external/libdivsufsort" path="external/libdivsufsort" revision="2a896e7033ced391c57ec46c1d772b15417621a4" upstream="trident-rom"/>
+  <project name="platform/external/libdrm" path="external/libdrm" revision="5a17919058c8395c0e8453416cc9833ea2b3f5e2" upstream="trident-rom"/>
+  <project name="platform/external/libedit" path="external/libedit" revision="67e14dfc833aafa400a3aad8cb329cbaec503445" upstream="trident-rom"/>
+  <project name="platform/external/libese" path="external/libese" revision="7731e776f9119435bca6285946f44da51e8c8fae" upstream="trident-rom"/>
+  <project name="platform/external/libevent" path="external/libevent" revision="6b11d747012c72746e485a24b68e65e28b8e015f" upstream="trident-rom"/>
+  <project name="platform/external/libexif" path="external/libexif" revision="ac8a6d4a2c14f29464b082f67864694f94266caf" upstream="trident-rom"/>
+  <project name="platform/external/libgdx" path="external/libgdx" revision="6bcf44912ceee31ec3e9620b4ba517fe6fb2c4d7" upstream="trident-rom"/>
+  <project name="platform/external/libgsm" path="external/libgsm" revision="eee0d405acfe5b6a4de71d0c32ad5d7b2479fb2c" upstream="trident-rom"/>
+  <project name="platform/external/libhevc" path="external/libhevc" revision="107916fb96592e1f44ac5fc9183dd28324dd64b6" upstream="trident-rom"/>
+  <project name="platform/external/libjpeg-turbo" path="external/libjpeg-turbo" revision="ff83a96d3414cd573a51ab9c3505a5a280471057" upstream="trident-rom"/>
+  <project name="platform/external/libldac" path="external/libldac" revision="56bedd68cf1e63548d137db74a7f5052962e7eae" upstream="trident-rom"/>
+  <project name="platform/external/liblzf" path="external/liblzf" revision="a88b9629447deabe8697d2f8fd4cc70aa6e1b563" upstream="trident-rom"/>
+  <project name="platform/external/libmicrohttpd" path="external/libmicrohttpd" revision="1e68f5d827a859ba3b7ab6a70a60247e0b96afa5" upstream="trident-rom"/>
+  <project name="platform/external/libmojo" path="external/libmojo" revision="dab69d106411f93ce701628a3bb3fa97f6820b94" upstream="trident-rom"/>
+  <project name="platform/external/libmpeg2" path="external/libmpeg2" revision="2d64da5d245b2ee7c1704e9bfc4edade8637a489" upstream="trident-rom"/>
+  <project name="platform/external/libmtp" path="external/libmtp" revision="7e8b340b5e80da63cd06977e61fe72784289bb3f" upstream="trident-rom"/>
+  <project name="platform/external/libnetfilter_conntrack" path="external/libnetfilter_conntrack" revision="5901dc149a9566908152818035b9513d47bb4d41" upstream="trident-rom"/>
+  <project name="platform/external/libnfnetlink" path="external/libnfnetlink" revision="3691f6d20dd8b9d4014081dff833977ae86eac1f" upstream="trident-rom"/>
+  <project name="platform/external/libnl" path="external/libnl" revision="a791c26f197f3d1b2315ce76f6b1b0d4a9562d9e" upstream="trident-rom"/>
+  <project name="platform/external/libogg" path="external/libogg" revision="d049cdb7d50d117ab5076fe6fd726b3e40fb1581" upstream="trident-rom"/>
+  <project name="platform/external/libopus" path="external/libopus" revision="a6342cf94af9c729fb6d5000f3e47d62b847b07f" upstream="trident-rom"/>
+  <project name="platform/external/libpcap" path="external/libpcap" revision="9bfd0218fde2b4795911f718609b3d470bf3fe89" upstream="trident-rom"/>
+  <project name="platform/external/libphonenumber" path="external/libphonenumber" revision="e470f5e20b103d30c6c498a40af54298c88fde52" upstream="trident-rom"/>
+  <project name="platform/external/libpng" path="external/libpng" revision="8e55f40df83f36378a0faf434e782763990d8dae" upstream="trident-rom"/>
+  <project name="platform/external/libtextclassifier" path="external/libtextclassifier" revision="91105a97e8f38130ccc342bc3b18f4cec40c22fa" upstream="trident-rom"/>
+  <project name="platform/external/libunwind" path="external/libunwind" revision="a2b897c00956a2acb911653303d2ab7a13bc38aa" upstream="trident-rom"/>
+  <project name="platform/external/libunwind_llvm" path="external/libunwind_llvm" revision="e6e06197c722a3b16c5870cc58512c80ca84d1ab" upstream="trident-rom"/>
+  <project name="platform/external/libusb" path="external/libusb" revision="723eef28307737e21348b124234c18eba2038764" upstream="trident-rom"/>
+  <project name="platform/external/libusb-compat" path="external/libusb-compat" revision="759481ae400d02fe99488dcdcd653b4f8139a39c" upstream="trident-rom"/>
+  <project name="platform/external/libvncserver" path="external/libvncserver" revision="a33e8e96b55a6b047f073d119191a8a89c75cb06" upstream="trident-rom"/>
+  <project name="platform/external/libvorbis" path="external/libvorbis" revision="dee2e0a12822ec62c89c2d7582f1a7d32cd0875b" upstream="trident-rom"/>
+  <project name="platform/external/libvpx" path="external/libvpx" revision="d1b0eca6a28e69cb2f5c00d0eebd510dcaf5f3be" upstream="trident-rom"/>
+  <project name="platform/external/libvterm" path="external/libvterm" revision="b0cd8ebbc4550b856a956e22c06f0740c5050f53" upstream="trident-rom"/>
+  <project name="platform/external/libweave" path="external/libweave" revision="c70e7b9224e25fcb6993409e8a153187e4e672c0" upstream="trident-rom"/>
+  <project name="platform/external/libxml2" path="external/libxml2" revision="9137b2eb9e120c874cf2b6cabf00f599ae8c15fe" upstream="trident-rom"/>
+  <project name="platform/external/libyuv" path="external/libyuv" revision="81fe2cdd28502d1fbc7f7e96eb559739635615aa" upstream="trident-rom"/>
+  <project name="platform/external/linux-kselftest" path="external/linux-kselftest" revision="f0c10b1db1de183a13ff98cf588e2ea90356ee58" upstream="trident-rom"/>
+  <project name="platform/external/lisa" path="external/lisa" revision="f04ac492c3ce340c78dfcd6131139b66a6df2c0f" upstream="trident-rom"/>
+  <project name="platform/external/littlemock" path="external/littlemock" revision="481b1fc280bbb7c4e528df70864882fc59840ed6" upstream="trident-rom"/>
+  <project name="platform/external/lld" path="external/lld" revision="26c9bb3b51a7ac4bc45f73d532a03cfd9982043a" upstream="trident-rom"/>
+  <project name="platform/external/llvm" path="external/llvm" revision="35bc84b3d03d67255bae485bb298887921b57bfd" upstream="trident-rom"/>
+  <project name="platform/external/lmfit" path="external/lmfit" revision="cc79822d100938c92bc403706c95f4583af1f60c" upstream="trident-rom"/>
+  <project name="platform/external/ltp" path="external/ltp" revision="c690a493d20fb5788f1b00d52e97194cdc031f26" upstream="trident-rom"/>
+  <project name="platform/external/lz4" path="external/lz4" revision="3ee768fbb6de6581220531f3af170d7b01bbc040" upstream="trident-rom"/>
+  <project name="platform/external/lzma" path="external/lzma" revision="8bc9f79685553f0e4dbcf19c647274ff5bc80e7a" upstream="trident-rom"/>
+  <project name="platform/external/markdown" path="external/markdown" revision="06a8f8b914d477183f68b84424bce8ff4dae7e84" upstream="trident-rom"/>
+  <project name="platform/external/mdnsresponder" path="external/mdnsresponder" revision="577b68be32c60b710d7a5130455e17c101ad9121" upstream="trident-rom"/>
+  <project name="platform/external/mesa3d" path="external/mesa3d" revision="535305b2743cf54b3b1770cae036864473c6ac43" upstream="trident-rom"/>
+  <project name="platform/external/messageformat" path="external/messageformat" revision="907c6d3a0e6887fe89da48f51012d0c14d881511" upstream="trident-rom"/>
+  <project name="platform/external/minijail" path="external/minijail" revision="3e15fdc2e3394f38647512383172513bb99876d0" upstream="trident-rom"/>
+  <project name="platform/external/mksh" path="external/mksh" revision="eb5e1e82803ffa89acf9ab649a4fa778431e1842" upstream="trident-rom"/>
+  <project name="platform/external/mmc-utils" path="external/mmc-utils" revision="f105db5bd1934f0c3e5f74bbc9a5aaeac7a6bf2b" upstream="trident-rom"/>
+  <project name="platform/external/mockftpserver" path="external/mockftpserver" revision="d2d467778a561725d42bc6c17e826e7ccf970bae" upstream="trident-rom"/>
+  <project name="platform/external/mockito" path="external/mockito" revision="1a957c0577ac3347db1b44bc87ccde78381a76b0" upstream="trident-rom"/>
+  <project name="platform/external/mockwebserver" path="external/mockwebserver" revision="2440623105409d48ec0a3717bb6f3da711a0f15d" upstream="trident-rom"/>
+  <project name="platform/external/modp_b64" path="external/modp_b64" revision="2df9f7bc7b980f78e0b367123fcbe1ae94077859" upstream="trident-rom"/>
+  <project name="platform/external/mp4parser" path="external/mp4parser" revision="88bd0c6cfa7fcfbbebcc15c2c565f714cb36b065" upstream="trident-rom"/>
+  <project name="platform/external/mtpd" path="external/mtpd" revision="793cd4e6e35c96d74895a83101608c57b82a7c39" upstream="trident-rom"/>
+  <project name="platform/external/nanohttpd" path="external/nanohttpd" revision="c6783c32331b3fe78ffd5077e7f180995d0e268e" upstream="trident-rom"/>
+  <project name="platform/external/nanopb-c" path="external/nanopb-c" revision="4cd605e8a418901739aa303330b3ee5ea542dbff" upstream="trident-rom"/>
+  <project name="platform/external/naver-fonts" path="external/naver-fonts" revision="91e6e9f94d1d769a8f742649674149ba98ce7d45" upstream="trident-rom"/>
+  <project name="platform/external/netcat" path="external/netcat" revision="b023a43765b15f0b0fd5b52b7d8021f515c59c23" upstream="trident-rom"/>
+  <project name="platform/external/netperf" path="external/netperf" revision="e100a0c4105b94f7044b243287a5da22f5e8e4e7" upstream="trident-rom"/>
+  <project name="platform/external/neven" path="external/neven" revision="4e8fb5935feb0183fafc831cf9162ec9c522c43f" upstream="trident-rom"/>
+  <project name="platform/external/nfacct" path="external/nfacct" revision="4e23be5b152185261a6154679406a661b39de6f4" upstream="trident-rom"/>
+  <project name="platform/external/nist-pkits" path="external/nist-pkits" revision="ca6b41c541f92f8e9c928561ff2b0890f337ada6" upstream="trident-rom"/>
+  <project name="platform/external/nist-sip" path="external/nist-sip" revision="8445067c3b53e5bd56c32f1c4fb688083c4f4005" upstream="trident-rom"/>
+  <project name="platform/external/noto-fonts" path="external/noto-fonts" revision="328f0d4b80b6746222b9a28a537894b5659447e1" upstream="trident-rom"/>
+  <project name="platform/external/oauth" path="external/oauth" revision="49f3624a6d3307b640a012f15b94d04174473501" upstream="trident-rom"/>
+  <project name="platform/external/objenesis" path="external/objenesis" revision="c2a84ee37f5afbdfa81e866790aebf7884e102d3" upstream="trident-rom"/>
+  <project name="platform/external/okhttp" path="external/okhttp" revision="2432e23857c822c2b2692e0da774ffc464a63d61" upstream="trident-rom"/>
+  <project name="platform/external/opencv" path="external/opencv" revision="c42a7f68da372776861437ea5a12a9ae54d934ff" upstream="trident-rom"/>
+  <project name="platform/external/openssh" path="external/openssh" revision="bd6488196fea9c2517100e27852f57f30322ad3b" upstream="trident-rom"/>
+  <project name="platform/external/owasp/sanitizer" path="external/owasp/sanitizer" revision="bbfb25464ff30c5a62dce351d719a8c533afb2a3" upstream="trident-rom"/>
+  <project name="platform/external/parameter-framework" path="external/parameter-framework" revision="247231a17211f56a96e6a595a9eedadc06231242" upstream="trident-rom"/>
+  <project name="platform/external/pcre" path="external/pcre" revision="b863f3713b739f9abf40de964919eace80a4ef5b" upstream="trident-rom"/>
+  <project name="platform/external/pdfium" path="external/pdfium" revision="d58cc9abff74ef4602d051f1bea852f34ce32452" upstream="trident-rom"/>
+  <project name="platform/external/piex" path="external/piex" revision="0bb948749042ed32c64341e2ca2b822c4189ba55" upstream="trident-rom"/>
+  <project name="platform/external/ply" path="external/ply" revision="583d33c593896afeb8486a25fabfcf6e9dc9ca75" upstream="trident-rom"/>
+  <project name="platform/external/ppp" path="external/ppp" revision="b870a67b1bedd7ac54655e1dae3b693e028ba268" upstream="trident-rom"/>
+  <project name="platform/external/proguard" path="external/proguard" revision="af893cdc1242e4cfbeeb10e2323f9a689a825177" upstream="trident-rom"/>
+  <project name="platform/external/protobuf" path="external/protobuf" revision="e7b0e6a2c06a914742c3e216556908a4fe9bee8e" upstream="trident-rom"/>
+  <project name="platform/external/python/cpython2" path="external/python/cpython2" revision="f6f0581de161b429d9dc01c7c28c5d44b9e7af6b" upstream="trident-rom"/>
+  <project name="platform/external/python/cpython3" path="external/python/cpython3" revision="9458f8e38d4fe0d58890c5867485dbbf2d538955" upstream="trident-rom"/>
+  <project name="platform/external/r8" path="external/r8" revision="90236a4bc61671d3fcad8d4142e8c2a523005a15" upstream="trident-rom"/>
+  <project name="platform/external/regex-re2" path="external/regex-re2" revision="79cce43a82abc1bc56c65de07a7df47d54e163a9" upstream="trident-rom"/>
+  <project name="platform/external/replicaisland" path="external/replicaisland" revision="7d9989c41b567732dec77c7f3ef85b8a76686081" upstream="trident-rom"/>
+  <project name="platform/external/rmi4utils" path="external/rmi4utils" revision="5acc3e7ec6ed784d757269f4a6323a156481468a" upstream="trident-rom"/>
+  <project name="platform/external/robolectric" path="external/robolectric" revision="5a737b731d134375e807b6a750618b3e87bd7d2f" upstream="trident-rom"/>
+  <project name="platform/external/roboto-fonts" path="external/roboto-fonts" revision="e062dc38a7d5870bc6d7dc33c6f42165c228d4c0" upstream="trident-rom"/>
+  <project name="platform/external/rootdev" path="external/rootdev" revision="99dba050cbec7b098169a70fb6512c960b9d7202" upstream="trident-rom"/>
+  <project name="platform/external/safe-iop" path="external/safe-iop" revision="cd76f998688d145235de78ecd5b340d0eac9239d" upstream="trident-rom"/>
+  <project name="platform/external/screencast" path="external/screencast" revision="8d9e674c884eb784c108ae386c916df088dd0f6f" upstream="master"/>
+  <project name="platform/external/screencast2" path="external/screencast2" revision="5d4ffa730b271dcf8b6d18c4a431d020ec3e6766" upstream="trident-rom"/>
+  <project name="platform/external/scrypt" path="external/scrypt" revision="651345f614361cae9bfeae7257c7d213594d4864" upstream="trident-rom"/>
+  <project name="platform/external/seccomp-tests" path="external/seccomp-tests" revision="1cb0e6d04432236554143db8058575e225e3624e" upstream="trident-rom"/>
+  <project name="platform/external/selinux" path="external/selinux" revision="f57fe8cbfe41cc322028873366d75a23d412b39d" upstream="trident-rom"/>
+  <project name="platform/external/sfntly" path="external/sfntly" revision="fe0705447c276c15815b1c729729383b93c95dff" upstream="trident-rom"/>
+  <project name="platform/external/shflags" path="external/shflags" revision="c4876e01829b8cf110ee33267bb1bad1f8ebb51d" upstream="trident-rom"/>
+  <project name="platform/external/skia" path="external/skia" revision="80d8f9271ca1352f206c2f429fabb5c458783fa5" upstream="trident-rom"/>
+  <project name="platform/external/sl4a" path="external/sl4a" revision="c256ac36f7c7731dc2f0b71e4de1a9e6b2721a5b" upstream="trident-rom"/>
+  <project name="platform/external/slf4j" path="external/slf4j" revision="6e9286aecedbe7e70ad9e5bcbb336ff391b18f5e" upstream="trident-rom"/>
+  <project name="platform/external/smali" path="external/smali" revision="21562f4f3c5a596c049a0495d031ff8a624922da" upstream="trident-rom"/>
+  <project name="platform/external/snakeyaml" path="external/snakeyaml" revision="ff07c77a5661859be409ae8f573bc55de64058f5" upstream="trident-rom"/>
+  <project name="platform/external/sonic" path="external/sonic" revision="01686c6249f11bb00f9fb5a130040e7c8ffd6982" upstream="trident-rom"/>
+  <project name="platform/external/sonivox" path="external/sonivox" revision="0ff34cc0c9d261465438cd1f4de49cf15cf36c72" upstream="trident-rom"/>
+  <project name="platform/external/speex" path="external/speex" revision="50ec1c87ff99c9de8887d7ddec3b3031e812492a" upstream="trident-rom"/>
+  <project name="platform/external/spirv-llvm" path="external/spirv-llvm" revision="08b0dc5ecc4d6063b27153d2bbf4bc20fccd1162" upstream="trident-rom"/>
+  <project name="platform/external/sqlite" path="external/sqlite" revision="a4747c1b1e7f79797dec46b74342a6f8fff0c665" upstream="trident-rom"/>
+  <project name="platform/external/squashfs-tools" path="external/squashfs-tools" revision="5b4709ba460869ed66f971115acfa88425a3faf8" upstream="trident-rom"/>
+  <project name="platform/external/strace" path="external/strace" revision="b376b3dcc6cd302c5b5cac250aa9ecf90a4e4654" upstream="trident-rom"/>
+  <project name="platform/external/stressapptest" path="external/stressapptest" revision="ea469443e9c2cd1fda87188df2b1ffe0e30656b2" upstream="trident-rom"/>
+  <project name="platform/external/svox" path="external/svox" revision="d185a2e72a5b509b7cafbfea7e53153295f8d08f" upstream="trident-rom"/>
+  <project name="platform/external/swiftshader" path="external/swiftshader" revision="1eefe88f245c4c2b0b8e6bdb69e805cb1e93edbf" upstream="trident-rom"/>
+  <project name="platform/external/syslinux" path="external/syslinux" revision="76d05dc695b06c4e987bb8078f78032441e1430c" upstream="trident-rom"/>
+  <project name="platform/external/tagsoup" path="external/tagsoup" revision="eb098e338ccf676033eb9185175b417ba1b10139" upstream="trident-rom"/>
+  <project name="platform/external/tcpdump" path="external/tcpdump" revision="87ef1e109858853d4638b35b0c3d594839933293" upstream="trident-rom"/>
+  <project name="platform/external/testng" path="external/testng" revision="1d7bbdba751215e9cf52f1f92f3591aa4e9d5894" upstream="trident-rom"/>
+  <project name="platform/external/timezonepicker-support" path="external/timezonepicker-support" revision="99e91a76fd74bad10266623d67cdb98d011f709e" upstream="trident-rom"/>
+  <project name="platform/external/tinyalsa" path="external/tinyalsa" revision="a807d3e58c08d2f1254d6db0504dc38af253b664" upstream="trident-rom"/>
+  <project name="platform/external/tinycompress" path="external/tinycompress" revision="d0bb6b61b73f904ef928025028dc69c6355b402d" upstream="trident-rom"/>
+  <project name="platform/external/tinyxml" path="external/tinyxml" revision="51671e889abed02c5c09c0b0bb0884040a6b6eeb" upstream="trident-rom"/>
+  <project name="platform/external/tinyxml2" path="external/tinyxml2" revision="69cec2fe92b2fb738edd2265fb48d8452052dfbf" upstream="trident-rom"/>
+  <project name="platform/external/toolchain-utils" path="external/toolchain-utils" revision="3690e025de8daaed03c4acb02d2b054e5c4c0dd5" upstream="trident-rom"/>
+  <project name="platform/external/toybox" path="external/toybox" revision="9a68cd0505faef30265470d29beea6fb0b01bafc" upstream="trident-rom"/>
+  <project name="platform/external/tpm2" path="external/tpm2" revision="74b8acb53f8dead7bb46ff84690e1ed060f3f666" upstream="trident-rom"/>
+  <project name="platform/external/trappy" path="external/trappy" revision="f9e349600eb37d7c5b85ee0bd412994945fb20d8" upstream="trident-rom"/>
+  <project name="platform/external/tremolo" path="external/tremolo" revision="83efef6ee2ec6a253cd8939c5515c00c5b5a1c85" upstream="trident-rom"/>
+  <project name="platform/external/unicode" path="external/unicode" revision="2817b5c467d450529148074aef3f2a7187a15680" upstream="trident-rom"/>
+  <project name="platform/external/universal-tween-engine" path="external/universal-tween-engine" revision="efe8193526dea3b430aab4cf6d9a6c3d280ea5d3" upstream="trident-rom"/>
+  <project name="platform/external/v4l2_codec2" path="external/v4l2_codec2" revision="bb9c22af2fd1b338780f95f74bebb56b2df5bba1" upstream="trident-rom"/>
+  <project name="platform/external/v8" path="external/v8" revision="a20961a066ce70347cbb3ea0f0097fb50c01bcf3" upstream="trident-rom"/>
+  <project name="platform/external/valgrind" path="external/valgrind" revision="42beee3cc3e4896603e678a1c9979cdab546c274" upstream="trident-rom"/>
+  <project name="platform/external/vboot_reference" path="external/vboot_reference" revision="7dd10004fd528e03141460afda3b8ea49a5a441d" upstream="trident-rom"/>
+  <project name="platform/external/vixl" path="external/vixl" revision="95bafe9b046b15d01e5cadf4872ed50e20b3fbf0" upstream="trident-rom"/>
+  <project name="platform/external/vogar" path="external/vogar" revision="b6cff99d04f81d255fc9024c91b828e4ed413200" upstream="trident-rom"/>
+  <project name="platform/external/volley" path="external/volley" revision="cc450f2af9e8d74d134883e3085688eeca34de38" upstream="trident-rom"/>
+  <project name="platform/external/vulkan-validation-layers" path="external/vulkan-validation-layers" revision="74576db80608980f4dc6afb8d1084d5b40bea9a0" upstream="trident-rom"/>
+  <project name="platform/external/webp" path="external/webp" revision="6c9c93561c503a06a4c0cdd4a4f1ba044df9fbfc" upstream="trident-rom"/>
+  <project name="platform/external/webrtc" path="external/webrtc" revision="9a91ec5187941c7bb6d0c8201c68f7c30061d29e" upstream="trident-rom"/>
+  <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" revision="2223536b5ac19f9de67595a46d3cb81324c7deab" upstream="trident-rom"/>
+  <project name="platform/external/wycheproof" path="external/wycheproof" revision="46d28ac44a242d84d610a294a640266d3b0e033b" upstream="trident-rom"/>
+  <project name="platform/external/x264" path="external/x264" revision="7bf0b975cdfd5692a4598ab09e1258abe5ea5fff" upstream="trident-rom"/>
+  <project name="platform/external/xmlrpcpp" path="external/xmlrpcpp" revision="c79d4eae757a81270915c2a7cf01c81b8d42785e" upstream="trident-rom"/>
+  <project name="platform/external/xmlwriter" path="external/xmlwriter" revision="e95d92246ee35273dde2bee8b00485cc14c12be5" upstream="trident-rom"/>
+  <project name="platform/external/xmp_toolkit" path="external/xmp_toolkit" revision="42ea4dc6d1fc2206a7778029070ed9213e3b0fbf" upstream="trident-rom"/>
+  <project name="platform/external/xz-embedded" path="external/xz-embedded" revision="5e2e69cfcf62e18fc8a5096701df8540e040f069" upstream="trident-rom"/>
+  <project name="platform/external/zlib" path="external/zlib" revision="476598b025f3f205bdb7d3fbb0b3789679bfadc4" upstream="trident-rom"/>
+  <project name="platform/external/zopfli" path="external/zopfli" revision="069cb023c39358bc0e1b3dc0397b8fcdd84b4d44" upstream="trident-rom"/>
+  <project name="platform/external/zxing" path="external/zxing" revision="fedf8f2d8099bf7bb85dc3db8699343d56617deb" upstream="trident-rom"/>
+  <project name="platform/frameworks/av" path="frameworks/av" revision="ece64d7d8ea14ce14c2b9c6a9d5771a012ba8c85" upstream="trident-rom"/>
+  <project name="platform/frameworks/base" path="frameworks/base" revision="de66fdc3d276dc1b4af6ea96076e67faeb84a61f" upstream="trident-rom"/>
+  <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="7273219b3c1634618813f5e1b55df4e432cde268" upstream="trident-rom"/>
+  <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="5db188878b2b20c02e7cbd3ef50ae46faf2f056d" upstream="trident-rom"/>
+  <project name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="85534a6340718a380bb8851d9d2394f2654ccf77" upstream="trident-rom"/>
+  <project name="platform/frameworks/data-binding" path="frameworks/data-binding" revision="82b5fd8e43ff8276419b032ce40f6eb42e04e67e" upstream="trident-rom"/>
+  <project name="platform/frameworks/ex" path="frameworks/ex" revision="2bec56250ed0f6c90dd46327e0d7fb876c25f254" upstream="trident-rom"/>
+  <project name="platform/frameworks/hardware/interfaces" path="frameworks/hardware/interfaces" revision="bb4526283b94dfcaa1bcd1f74e6b2433d57b4911" upstream="trident-rom"/>
+  <project name="platform/frameworks/layoutlib" path="frameworks/layoutlib" revision="b92f89582e55359c0b6bcef75e6fbb72d5969cb3" upstream="trident-rom"/>
+  <project name="platform/frameworks/minikin" path="frameworks/minikin" revision="43a517d7f1d8f4b79b24791259dda24cd00688aa" upstream="trident-rom"/>
+  <project name="platform/frameworks/ml" path="frameworks/ml" revision="3d4a02b1bb9b5a8add23f44e9ca21deeb569c78a" upstream="trident-rom"/>
+  <project name="platform/frameworks/multidex" path="frameworks/multidex" revision="2ddc1a11bb51be9521e5dce4b8d1ad85028d9da0" upstream="trident-rom"/>
+  <project name="platform/frameworks/native" path="frameworks/native" revision="630929cec4089d7cdd1af72b864c24a2b7bdf706" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap" revision="a0d4e3108663202564a6833b76770075b8e5b767" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/bluetooth" path="frameworks/opt/bluetooth" revision="a82a9ef4ac16a7aee117082b69846759ad498b8b" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" revision="a861b575421fa63acf84aa27286872f2225a8a12" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/chips" path="frameworks/opt/chips" revision="21b3b3c7f4808243d40608767a5ac37632e1d228" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/colorpicker" path="frameworks/opt/colorpicker" revision="e3771879de6fbc4ecca1e5f1bba074162f6ba3bf" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/datetimepicker" path="frameworks/opt/datetimepicker" revision="50781edfd22358f30834444812a44cc05ae7521f" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" revision="92eede13edbf22b501edb9aeb92366f91eab9781" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/inputconnectioncommon" path="frameworks/opt/inputconnectioncommon" revision="3baece9b20fa480da46d860acd7320fd9eee3386" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/inputmethodcommon" path="frameworks/opt/inputmethodcommon" revision="990fcb1a6dbb5d1204cc8ec86e4bc3f691f4aeeb" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet" revision="997023d08b6f0a973f1d83aba79839d26d92386f" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/net/ims" path="frameworks/opt/net/ims" revision="2430e545a6428335464d481d71312e609b1df044" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/net/lowpan" path="frameworks/opt/net/lowpan" revision="84056f40394d65dbf78c4d83771d7a70d117ee9f" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip" revision="cc804954a5dca08a4b8980bc1a3229fb474191bf" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/net/wifi" path="frameworks/opt/net/wifi" revision="060f7df771d31c7dce238a516dfbf4d9f015d16d" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" revision="61549a8b76c4c7dcf98939fb16949a4d699ca8fa" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/setupwizard" path="frameworks/opt/setupwizard" revision="3256d9b283af6db6a1e9c4fba79168deca7b1140" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" revision="3ec87940e2a34f016a078d52f7a1a9f578e86f29" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker" revision="66056c7ebb06d3c011a8682a16d8c0d07c08b6b9" upstream="trident-rom"/>
+  <project name="platform/frameworks/opt/vcard" path="frameworks/opt/vcard" revision="7122fb184a25f3fec4674a35d815dfb3167de79d" upstream="trident-rom"/>
+  <project name="platform/frameworks/rs" path="frameworks/rs" revision="edee97fe1aaa13f555ed42822c78695d525a9da3" upstream="trident-rom"/>
+  <project name="platform/frameworks/support" path="frameworks/support" revision="57615d20b74a948ff0d36767891b7b5ee41818f1" upstream="trident-rom"/>
+  <project name="platform/frameworks/webview" path="frameworks/webview" revision="ef2bb3c2c725da52d04451e7235f6b051677df7f" upstream="trident-rom"/>
+  <project name="platform/frameworks/wilhelm" path="frameworks/wilhelm" revision="af8e1d02e5e566384875f10499142f14eaad90e8" upstream="trident-rom"/>
+  <project name="platform/hardware/akm" path="hardware/akm" revision="99e8b227cd00678ce863c04ebde0b8d9a6f7df5c" upstream="trident-rom"/>
+  <project name="platform/hardware/broadcom/libbt" path="hardware/broadcom/libbt" revision="e4b943a7ece621b09dce62e41b87155dfadd05be" upstream="trident-rom"/>
+  <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" revision="f756c26aea4d295e04f36e2be3c7c017775ae8a8" upstream="trident-rom"/>
+  <project name="platform/hardware/google/apf" path="hardware/google/apf" revision="4f1b5f27e705d82d0567f4566c17aa838ba413a0" upstream="trident-rom"/>
+  <project name="platform/hardware/interfaces" path="hardware/interfaces" revision="23a34e33d9e0308427aeedb3b4342b5e4cd1a9e7" upstream="trident-rom"/>
+  <project name="platform/hardware/invensense" path="hardware/invensense" revision="11e5ff75af866f91622b6008fa13db1c3685ae69" upstream="trident-rom"/>
+  <project name="platform/hardware/libhardware" path="hardware/libhardware" revision="cf2669938773a27418f0b2439fe03a8ad657f790" upstream="trident-rom"/>
+  <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" revision="feec66b34d4c1d0a76b6f1171ab30a995bc9319d" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/audio" path="hardware/qcom/audio" revision="8f9a02992fdc4f3e368fdfc8b4085e7bf4f3b854" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/bootctrl" path="hardware/qcom/bootctrl" revision="b18209bf274c7f2045780a8ad14067646175a606" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/bt" path="hardware/qcom/bt" revision="2e4ef49956a430bfb7cabc35b7fb0c33b2a557b7" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/display" path="hardware/qcom/display" revision="a202d850f205f0ebfcd633e81bd77b8c2b571e2d" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" revision="2ee815627b2854825b0d43f190eff5de4830431d" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/media" path="hardware/qcom/media" revision="c0f619a4f57b941f8ce04e0d7a2cab40539668bb" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/thermal" path="hardware/qcom/thermal" revision="c473364751aa2f8bd44b01d64251a90e02301a5c" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/vr" path="hardware/qcom/vr" revision="2df5b73b30f2f15a27c47624ae8d343a9869aa56" upstream="trident-rom"/>
+  <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" revision="858336d85c631e3e147d5d5c14f5ad207ff9ac14" upstream="trident-rom"/>
+  <project name="platform/hardware/ril" path="hardware/ril" revision="a9e983fde87e33419bc7e6af9f43f47cdf4cb04a" upstream="trident-rom"/>
+  <project name="platform/libcore" path="libcore" revision="8c9e3e39969df78f4bf5043a41bf6cd0fcbdd549" upstream="trident-rom"/>
+  <project name="platform/libnativehelper" path="libnativehelper" revision="f0192b324f9a89a821c707378e47c208790955db" upstream="trident-rom"/>
+  <project name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" revision="ae5989936da179b2afeceae8ff407fb67a2b2512" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Bluetooth" path="packages/apps/Bluetooth" revision="ff7ca24f875d72c1a0cebc572e533ba968da6120" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Browser2" path="packages/apps/Browser2" revision="4aefbe8ff37a3d67136eab7f29d37c597eef3d1c" upstream="trident-rom"/>
+  <project name="platform/packages/apps/CMFileManager" path="packages/apps/CMFileManager" revision="58d53ebdacb4b3dc7cab40be4581339b874cf26c" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Calendar" path="packages/apps/Calendar" revision="ba9f8d5fca565550d32e842c3912fc45e3df928d" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Camera2" path="packages/apps/Camera2" revision="9e7d479ec5a559f7317b453abe76e8a3d5a7086f" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Dialer" path="packages/apps/Car/Dialer" revision="e14788f5e5ff653b946c68980906ca01f405c8e2" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Hvac" path="packages/apps/Car/Hvac" revision="da0c876e06aa6f7e1ca7a600459af9e1e8cab339" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/LatinIME" path="packages/apps/Car/LatinIME" revision="07dbca1344b91e252aee92348b39304c2ef42c32" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/LensPicker" path="packages/apps/Car/LensPicker" revision="1f9791d35594297df9c37d44a48090df96110712" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/LocalMediaPlayer" path="packages/apps/Car/LocalMediaPlayer" revision="0729ac7918d66cd354cc34b3481542f0e37b4ba6" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Media" path="packages/apps/Car/Media" revision="6713fd66b3653d01b7f288ac12d66f48a5f17b21" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Messenger" path="packages/apps/Car/Messenger" revision="aba72a647037b6e5151b0d2141792018eb19e603" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Overview" path="packages/apps/Car/Overview" revision="374b41023afc0fad8c0d410cd266bf0ea945ccb8" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Radio" path="packages/apps/Car/Radio" revision="73e242806d45659824a505276ff3a795d513d9a6" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Settings" path="packages/apps/Car/Settings" revision="639ec831c3dad6aca1b34db78c99c99acb918b22" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/Stream" path="packages/apps/Car/Stream" revision="c35843f2c9480544ecea9df5e47955c1a28b1e51" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/SystemUpdater" path="packages/apps/Car/SystemUpdater" revision="3506f3f39a1328465009ec080a741373b338bead" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/UserManagement" path="packages/apps/Car/UserManagement" revision="ff9fc654b3b7640949d0e971b9542b0387433935" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Car/libs" path="packages/apps/Car/libs" revision="11a5e130be5a17f3b1f055805d373de08d00e639" upstream="trident-rom"/>
+  <project name="platform/packages/apps/CarrierConfig" path="packages/apps/CarrierConfig" revision="000b4a838e19dba0fb164e73b2071e9338ec684f" upstream="trident-rom"/>
+  <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" revision="072e5a033895f23f27787d1d184c8fba7c51aa25" upstream="trident-rom"/>
+  <project name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller" revision="7580e28f6d3caacf28df1a45a0761b35dcf2bb9e" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Contacts" path="packages/apps/Contacts" revision="57ec08d1d875a621ff6dcc54bcf448c2485e831a" upstream="trident-rom"/>
+  <project groups="pdk-fs" name="platform/packages/apps/ContactsCommon" path="packages/apps/ContactsCommon" revision="db1625a98507ba36c27960798447bebeb54a4817" upstream="osborn-rom"/>
+  <project name="platform/packages/apps/DeskClock" path="packages/apps/DeskClock" revision="7c66496abc055d3b52b589278360c867aa641fbd" upstream="trident-rom"/>
+  <project name="platform/packages/apps/DevCamera" path="packages/apps/DevCamera" revision="e4d7dcd2fa0285db0f0b2ebeac663b2524f47e80" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Dialer" path="packages/apps/Dialer" revision="114895e79269c82dca185a0e70eafbaacac4a3fe" upstream="trident-rom"/>
+  <project name="platform/packages/apps/DocumentsUI" path="packages/apps/DocumentsUI" revision="18841cac4fbbef794268332d0d843027b35f8c5c" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Email" path="packages/apps/Email" revision="77d1529fb8cb2ac8ebb4d505ee773f04a96d199a" upstream="trident-rom"/>
+  <project name="platform/packages/apps/EmergencyInfo" path="packages/apps/EmergencyInfo" revision="d0a7e662baf1eb1738eef491738f1a2165af8c58" upstream="trident-rom"/>
+  <project name="platform/packages/apps/ExactCalculator" path="packages/apps/ExactCalculator" revision="d6806890fbf527c66de3e31ce89de719b8a615bc" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Exchange" path="packages/apps/Exchange" revision="9536450c33dd00c469011cf9aa16c35f7c0349db" upstream="s-master"/>
+  <project name="platform/packages/apps/Gallery" path="packages/apps/Gallery" revision="203fdef17da56b6de18db6caef1a930843250893" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" revision="4e65ac2bb56b07b0e72c78e037f81d598b89da3c" upstream="trident-rom"/>
+  <project name="platform/packages/apps/HTMLViewer" path="packages/apps/HTMLViewer" revision="ce1ff9cca35d9484ce16d711cef7bcb3fa62ee72" upstream="trident-rom"/>
+  <project name="platform/packages/apps/KeyChain" path="packages/apps/KeyChain" revision="9eb4d5dd8f043fe1a1e710c6d95e64a7309a4b28" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Launcher2" path="packages/apps/Launcher2" revision="3921be7043b569b81608b879dc6d64493b441937" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Launcher3" path="packages/apps/Launcher3" revision="9b84e56bee8ab88445f27e627fbf92df9104d3d1" upstream="trident-rom"/>
+  <project name="platform/packages/apps/LegacyCamera" path="packages/apps/LegacyCamera" revision="4b9f86b544c31c4782a1c8996283533d6af578f4" upstream="trident-rom"/>
+  <project name="platform/packages/apps/ManagedProvisioning" path="packages/apps/ManagedProvisioning" revision="ac1c01c4e495d1be9b5079d1158cb8e4115b28f6" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Messaging" path="packages/apps/Messaging" revision="1e28d9d2e76eb3f60e62789a806b6c03e97302e3" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Mms" path="packages/apps/Mms" revision="1c3fa11333dfcb8723e9d69274a9271c58063aab" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Music" path="packages/apps/Music" revision="0410fb90c6f900788d1262bdb6827927d5b207c9" upstream="trident-rom"/>
+  <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" revision="442951d737a3fda429978eae7b72949925ab7ee4" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Nfc" path="packages/apps/Nfc" revision="492a1253f3fbee91b175dd9e11cd393e454986d1" upstream="trident-rom"/>
+  <project name="platform/packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer" revision="4ad21ec09c8be42b616622715d542bd3b177ce3a" upstream="trident-rom"/>
+  <project name="platform/packages/apps/PackageInstaller" path="packages/apps/PackageInstaller" revision="30913891fe8413910611e74950faa0d908c7df41" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Phone" path="packages/apps/Phone" revision="79731f02b7009206a01182d2cca15dfc8491da09" upstream="trident-rom"/>
+  <project name="platform/packages/apps/PhoneCommon" path="packages/apps/PhoneCommon" revision="bdffcb4156b5ed16021267065cc559bea696e0b4" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Protips" path="packages/apps/Protips" revision="bfa3c5f9851111c978a7cbda9d2e65dfbcd7dd4d" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Provision" path="packages/apps/Provision" revision="a34e7362c6f37e3450492137fb032d3b95faf9f4" upstream="trident-rom"/>
+  <project name="platform/packages/apps/QuickSearchBox" path="packages/apps/QuickSearchBox" revision="407357965b453753dd0c3b8da0cad507d60f2403" upstream="trident-rom"/>
+  <project name="platform/packages/apps/RetailDemo" path="packages/apps/RetailDemo" revision="7353b65060dbcdc01b65aa34ef01129dbbf2bb03" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SafetyRegulatoryInfo" path="packages/apps/SafetyRegulatoryInfo" revision="1d2f69fc793ec84098c66ba3e5236d9f5902d795" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Settings" path="packages/apps/Settings" revision="ef0d431fe7be6f08b669a4c4eaeccbef804c79ab" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SmartCardService" path="packages/apps/SmartCardService" revision="29eae320a4bd222b5ff1c092f84f1aebba88d0b7" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SnapdragonCamera" path="packages/apps/SnapdragonCamera" revision="a73c73e3c258b8ff855ed30bc844e86df1c18bda" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SnapdragonGallery" path="packages/apps/SnapdragonGallery" revision="131e02cc9651c3df23f9e6a4d8bd67abf4cbcbfe" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SnapdragonMusic" path="packages/apps/SnapdragonMusic" revision="b9ecc691d04e4f0ddc2625ebcdf8f8625121be04" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" revision="8df95f63e5ef1d813121db234f05baebbe6d61c5" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SpareParts" path="packages/apps/SpareParts" revision="f47fff0421153f4c20d155df8d0864a7036bdb06" upstream="trident-rom"/>
+  <project name="platform/packages/apps/SpeechRecorder" path="packages/apps/SpeechRecorder" revision="529e91469dd2874a652d0cd565de2e671ce8e506" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Stk" path="packages/apps/Stk" revision="336870b879199d1ab2ea478bd67d08afa1951d24" upstream="trident-rom"/>
+  <project name="platform/packages/apps/StorageManager" path="packages/apps/StorageManager" revision="1c550f60a39b1f6101aa1ac69bdea50460568bb2" upstream="trident-rom"/>
+  <project name="platform/packages/apps/TV" path="packages/apps/TV" revision="bb2e798ef4d546dd54cd9e95796403062b860c15" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Tag" path="packages/apps/Tag" revision="40a36d431ca9f85f4679d15c99791fff6914e92d" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Terminal" path="packages/apps/Terminal" revision="6afc968c6424f7f5a68425804790379b66072560" upstream="trident-rom"/>
+  <project name="platform/packages/apps/Test/connectivity" path="packages/apps/Test/connectivity" revision="2ed387c6cdbcde596f93b995e6d55090e12e848d" upstream="trident-rom"/>
+  <project name="platform/packages/apps/TimeZoneData" path="packages/apps/TimeZoneData" revision="28ee43e04ee666f2d2969fda7b16c370d36edb6f" upstream="trident-rom"/>
+  <project name="platform/packages/apps/TimeZoneUpdater" path="packages/apps/TimeZoneUpdater" revision="268bbb6d5eea4f6bbb8c3e01716b854407295838" upstream="trident-rom"/>
+  <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" revision="2168b7b29d96346393d1d6510e3a8fb028fff3b0" upstream="trident-rom"/>
+  <project name="platform/packages/apps/UnifiedEmail" path="packages/apps/UnifiedEmail" revision="d29b779f01e938d6c17c0dc83a33cec6a1dba6d8" upstream="trident-rom"/>
+  <project name="platform/packages/apps/WallpaperPicker" path="packages/apps/WallpaperPicker" revision="b241483c0881994bcfbb2d643c1f35a7ebcd43b0" upstream="trident-rom"/>
+  <project name="platform/packages/experimental" path="packages/experimental" revision="2460de484cdc9e40806f55988fd962c655e30a62" upstream="trident-rom"/>
+  <project name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME" revision="767c7d44fbadc0a8d16e9f95f211ea65edc17b04" upstream="trident-rom"/>
+  <project name="platform/packages/inputmethods/OpenWnn" path="packages/inputmethods/OpenWnn" revision="61902845f80c35fa56c736219efb14dacd0cfda3" upstream="trident-rom"/>
+  <project name="platform/packages/providers/ApplicationsProvider" path="packages/providers/ApplicationsProvider" revision="9e77399f05f099ae379bbb8a523bc70be9a0c661" upstream="s-master"/>
+  <project name="platform/packages/providers/BlockedNumberProvider" path="packages/providers/BlockedNumberProvider" revision="259efd7654a88f7587c54bba2e19c34c648cc32b" upstream="trident-rom"/>
+  <project name="platform/packages/providers/BookmarkProvider" path="packages/providers/BookmarkProvider" revision="8f36a18c4ec32d6386d2f0583aecb3dc0835ceb0" upstream="trident-rom"/>
+  <project name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider" revision="80ba758ab960885e39a1198d335377ccef231f89" upstream="trident-rom"/>
+  <project name="platform/packages/providers/CallLogProvider" path="packages/providers/CallLogProvider" revision="66910efd8d6e3bb84574faae478447ad18dd88d4" upstream="trident-rom"/>
+  <project name="platform/packages/providers/ContactsProvider" path="packages/providers/ContactsProvider" revision="2a542b2762959cdb7094c8d508bc6c65b4159678" upstream="trident-rom"/>
+  <project name="platform/packages/providers/DownloadProvider" path="packages/providers/DownloadProvider" revision="bfdb482e8e817380ce860b4ae627b3f9e4b29b53" upstream="trident-rom"/>
+  <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" revision="8af8d5e94cb20795e7c7f12762ff075b426975e6" upstream="trident-rom"/>
+  <project name="platform/packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" revision="84f72492ea53ee431a05d90fdf3a579110509edd" upstream="trident-rom"/>
+  <project name="platform/packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider" revision="63a9c3a6d287ace107f0f4e49cdf977656dfbf26" upstream="trident-rom"/>
+  <project name="platform/packages/providers/TvProvider" path="packages/providers/TvProvider" revision="e8b0bc5b7db4a45f85e029066f354efbd5930c0d" upstream="trident-rom"/>
+  <project name="platform/packages/providers/UserDictionaryProvider" path="packages/providers/UserDictionaryProvider" revision="3c9994361f6e7cd0ccd68ef9ec0d54b827d927e3" upstream="trident-rom"/>
+  <project name="platform/packages/screensavers/Basic" path="packages/screensavers/Basic" revision="af51ab5d5d99851413cde77c003185b7818b8483" upstream="trident-rom"/>
+  <project name="platform/packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable" revision="56bcafdae3e0b3f71705ffe0526a490f39fffe6e" upstream="trident-rom"/>
+  <project name="platform/packages/screensavers/WebView" path="packages/screensavers/WebView" revision="6e0a80f6faed6191acc8ce1b6c79eada09e9e042" upstream="trident-rom"/>
+  <project name="platform/packages/services/BuiltInPrintService" path="packages/services/BuiltInPrintService" revision="91677a1f406c3f568dfaed3cf42293296e536396" upstream="trident-rom"/>
+  <project name="platform/packages/services/Car" path="packages/services/Car" revision="494d98d6ce4c3c5420cdb14879f8c01390e29633" upstream="trident-rom"/>
+  <project name="platform/packages/services/Mms" path="packages/services/Mms" revision="53a30f8ce52c983eef0caa2c03ab8a59c1c985f7" upstream="trident-rom"/>
+  <project name="platform/packages/services/NetworkRecommendation" path="packages/services/NetworkRecommendation" revision="d38530e427c55fb801de3c65c127672c9b678c8e" upstream="trident-rom"/>
+  <project name="platform/packages/services/Telecomm" path="packages/services/Telecomm" revision="59c0d0bb9f66c061cf3a088d9722a081f969e2c3" upstream="trident-rom"/>
+  <project name="platform/packages/services/Telephony" path="packages/services/Telephony" revision="74480234749184b58104b6e9c50512414fd804da" upstream="trident-rom"/>
+  <project name="platform/packages/wallpapers/LivePicker" path="packages/wallpapers/LivePicker" revision="8ab44c6a217fb904ce0aeefdad33cd397f74d704" upstream="trident-rom"/>
+  <project name="platform/pdk" path="pdk" revision="b2591d08408b2765a2c1f99830011dbbca0db84e" upstream="trident-rom"/>
+  <project name="platform/platform_testing" path="platform_testing" revision="62c977e8b55b51d9739494cbfc473cdc5cb86868" upstream="trident-rom"/>
+  <project name="platform/prebuilts/abi-dumps/ndk" path="prebuilts/abi-dumps/ndk" revision="84799d6c14e7c88d7c6eea06b799858bbc834efa" upstream="trident-rom"/>
+  <project name="platform/prebuilts/abi-dumps/vndk" path="prebuilts/abi-dumps/vndk" revision="2522cfbaea6f7ddd8d1416e9db9f84dc7eef1226" upstream="trident-rom"/>
+  <project name="platform/prebuilts/android-emulator" path="prebuilts/android-emulator" revision="400cd54dca1c329fd7f1c8cb9e40b1fbbf3f3af3" upstream="trident-rom"/>
+  <project name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="88fa20009d5581163b4656d52e2fcc1f56042da6" upstream="trident-rom"/>
+  <project name="platform/prebuilts/checkcolor" path="prebuilts/checkcolor" revision="f6f661b424f646bc5ddf9e1b1e644abb492b7547" upstream="trident-rom"/>
+  <project name="platform/prebuilts/checkstyle" path="prebuilts/checkstyle" revision="a8a50e922b39a2dba7e56030c660e1aabca168f3" upstream="trident-rom"/>
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="ce80566d209ef0fba56e5bd4cc4cf11435f83a71" upstream="trident-rom"/>
+  <project name="platform/prebuilts/deqp" path="prebuilts/deqp" revision="fcff955e99f3d02e7fe0b0a65818b5cc690594b7" upstream="trident-rom"/>
+  <project name="platform/prebuilts/devtools" path="prebuilts/devtools" revision="2538644348d06278149f8f918930d058cb4f32a7" upstream="trident-rom"/>
+  <project name="platform/prebuilts/eclipse" path="prebuilts/eclipse" revision="cf9f78f8cf41b16edf9f712598a42743d5cea4af" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" revision="6d08ca9f45ff685648fd13c75bf5cac4b11c19bb" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="c9c4fb77a024d2610f83e54e536c99a964ea85ab" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" revision="26e93f6af47f7bd3a9beb5c102a5f45e19bfa38a" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="43bf3bf040b873cb1334cdc0687a03d8d6f4b1c8" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" revision="a706ab3bc2ac5168166659d6423da4b8b8e8644b" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" revision="12eccb2e29b05b39fa83e5299b1f4486b9e743a4" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" revision="e76a9a506d7ad132f107eb2f7c27b6a8ccb68b91" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" revision="a57c546eec04da569ddd24dd72b0d57feb95845a" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gdb/linux-x86" path="prebuilts/gdb/linux-x86" revision="4adfde8bc82dd39f59e0445588c3e599ada477d2" upstream="trident-rom"/>
+  <project name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" revision="9802e351bf16f8137807da945a4bc36371a16be6" upstream="trident-rom"/>
+  <project name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin" revision="cd1b6806eae4eaa88d82ce61dbb7c2bcfea1f96a" upstream="trident-rom"/>
+  <project name="platform/prebuilts/jdk/jdk8" path="prebuilts/jdk/jdk8" revision="4949e1906af402a00d74e20939abc6b95d2caf30" upstream="trident-rom"/>
+  <project name="platform/prebuilts/libs/libedit" path="prebuilts/libs/libedit" revision="d32685dba4011664b590b94ad156bc734c2c9bb5" upstream="trident-rom"/>
+  <project name="platform/prebuilts/maven_repo/android" path="prebuilts/maven_repo/android" revision="c7fc1cdb67ff477e4ef1f7dee12568f223ea18c7" upstream="trident-rom"/>
+  <project name="platform/prebuilts/maven_repo/bumptech" path="prebuilts/maven_repo/bumptech" revision="268c5495b8003e09173a1ae7b1e9dc9b019e300d" upstream="trident-rom"/>
+  <project name="platform/prebuilts/misc" path="prebuilts/misc" revision="b121b7d9088a36c1e0d7c813f06828d20ba3076d" upstream="trident-rom"/>
+  <project name="platform/prebuilts/ndk" path="prebuilts/ndk" revision="f39cb3e537ad90d4985fc372b339d466799d964e" upstream="trident-rom"/>
+  <project name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5" revision="49b50adb1a149100905b368570c2cb56cadc0854" upstream="trident-rom"/>
+  <project name="platform/prebuilts/qemu-kernel" path="prebuilts/qemu-kernel" revision="87e7c6027290300bfb92c082c4fa622e78b03359" upstream="trident-rom"/>
+  <project name="platform/prebuilts/sdk" path="prebuilts/sdk" revision="692a2a62d5862258c6a88d3b9bfcbc1dd0431ae8" upstream="trident-rom"/>
+  <project name="platform/prebuilts/tools" path="prebuilts/tools" revision="bd037f3696cc33196a876c34a7f5a0dcc6e089ee" upstream="trident-rom"/>
+  <project name="platform/sdk" path="sdk" revision="5b11a64436399a07daaf6034193be981193a7b93" upstream="trident-rom"/>
+  <project name="platform/system/bt" path="system/bt" revision="838965314ea87ca5dd948a650e5088471a236c7e" upstream="trident-rom"/>
+  <project name="platform/system/ca-certificates" path="system/ca-certificates" revision="5ce37ce30d01ba9069a6875d2e1555c961decd70" upstream="trident-rom"/>
+  <project name="platform/system/chre" path="system/chre" revision="c681bd722081f54fb5b3de61e7c2ece54f5adb0b" upstream="trident-rom"/>
+  <project name="platform/system/connectivity/wificond" path="system/connectivity/wificond" revision="ab814de491484c2f1f1b45f19a2f041f35c05790" upstream="trident-rom"/>
+  <project name="platform/system/connectivity/wifilogd" path="system/connectivity/wifilogd" revision="4a8ce635151597ebd50ed908afb307967e96db91" upstream="trident-rom"/>
+  <project name="platform/system/core" path="system/core" revision="f69f3a69515beb62fbd3f2e9b7760d54451ade94" upstream="trident-rom"/>
+  <project name="platform/system/extras" path="system/extras" revision="8321db4200454943e056101d2133505442763a69" upstream="trident-rom"/>
+  <project name="platform/system/gatekeeper" path="system/gatekeeper" revision="1b43581e2497d120e9a7eb3d0cf29a39b3edc0b3" upstream="trident-rom"/>
+  <project name="platform/system/hardware/interfaces" path="system/hardware/interfaces" revision="244deb7559a1982cbaa21d9bd74d7e94b27694ee" upstream="trident-rom"/>
+  <project name="platform/system/hwservicemanager" path="system/hwservicemanager" revision="005c9587f56d7cfe724f6268f0e160d8755d91d6" upstream="trident-rom"/>
+  <project name="platform/system/keymaster" path="system/keymaster" revision="cc2be5488f64d9c502a92d384d999b553bdfde23" upstream="trident-rom"/>
+  <project name="platform/system/libfmq" path="system/libfmq" revision="fd173e950f5b91ea195cd540b5ee55f710b4addc" upstream="trident-rom"/>
+  <project name="platform/system/libhidl" path="system/libhidl" revision="70e8f3c0e18aaf89ca8296dbae1a328e05ab8aa1" upstream="trident-rom"/>
+  <project name="platform/system/libhwbinder" path="system/libhwbinder" revision="b4cdd51de1b5f45d948ccb7e9f449bffdae8139a" upstream="trident-rom"/>
+  <project name="platform/system/libufdt" path="system/libufdt" revision="c75cf9d7ae8c30d2e224e3a8d5d0571d01ce9886" upstream="trident-rom"/>
+  <project name="platform/system/libvintf" path="system/libvintf" revision="55af503b1bd35248724686972b2b65ea34b13e1e" upstream="trident-rom"/>
+  <project name="platform/system/media" path="system/media" revision="e889beebff7291e7c685c6447db584dad1ec6899" upstream="trident-rom"/>
+  <project name="platform/system/netd" path="system/netd" revision="7182de72f8c502cec93a89f96466835fe2541f73" upstream="trident-rom"/>
+  <project name="platform/system/nfc" path="system/nfc" revision="523f6548bd7e28929b7c1905bf0f00ee050eb12d" upstream="trident-rom"/>
+  <project name="platform/system/nvram" path="system/nvram" revision="a2cbda182e4631dc45b3e988db9a6c0a0c36a610" upstream="trident-rom"/>
+  <project name="platform/system/qcom" path="vendor/qcom/opensource/softap" revision="a1b2b46de3e14fef9075c889c5408ffef14ae06e" upstream="trident-rom"/>
+  <project name="platform/system/security" path="system/security" revision="e288cfc1f178c94c19adf4d76d23d7dc39066f6e" upstream="trident-rom"/>
+  <project name="platform/system/sepolicy" path="system/sepolicy" revision="4eafb25dec3af25857b939205a45ecbd42e41836" upstream="trident-rom"/>
+  <project name="platform/system/timezone" path="system/timezone" revision="55f4d7209e0d1d198a5615a7b7a4a0c3339939cc" upstream="trident-rom"/>
+  <project name="platform/system/tools/aidl" path="system/tools/aidl" revision="0a3a83f9cb942c73b04407dcb1fc5f9ceb176172" upstream="trident-rom"/>
+  <project name="platform/system/tools/hidl" path="system/tools/hidl" revision="6feae2a53afc21c34e1186e9be3a09286a978aa8" upstream="trident-rom"/>
+  <project name="platform/system/tpm" path="system/tpm" revision="987689803d813efb9b011236a7853c8f3edba1f6" upstream="trident-rom"/>
+  <project name="platform/system/update_engine" path="system/update_engine" revision="ca51f4f68df0c634d0e7fd2198d8e7947fefd306" upstream="trident-rom"/>
+  <project name="platform/system/vold" path="system/vold" revision="7b6e58c695a8f2c735201b74c51b60711f29bee6" upstream="trident-rom"/>
+  <project name="platform/test/vts" path="test/vts" revision="813e85a22a36fb996e10f2c436a01a87e51737c4" upstream="trident-rom"/>
+  <project name="platform/test/vts-testcase/fuzz" path="test/vts-testcase/fuzz" revision="1827b3d57935677f0ded5f785385595f50ead1a8" upstream="trident-rom"/>
+  <project name="platform/test/vts-testcase/hal" path="test/vts-testcase/hal" revision="f4ebb39ac3b708a0bc36a1a3f9f38c06ededa0a6" upstream="trident-rom"/>
+  <project name="platform/test/vts-testcase/hal-trace" path="test/vts-testcase/hal-trace" revision="b5338702c4c4e005b9785c1dd7d39ab0c48c9064" upstream="trident-rom"/>
+  <project name="platform/test/vts-testcase/kernel" path="test/vts-testcase/kernel" revision="4a832fb06f922fb97b81c2be50434f11f9dc256d" upstream="trident-rom"/>
+  <project name="platform/test/vts-testcase/performance" path="test/vts-testcase/performance" revision="6609e8fa34e5fde9919d2d0b90959bd1baff558d" upstream="trident-rom"/>
+  <project name="platform/test/vts-testcase/security" path="test/vts-testcase/security" revision="848c88f45c929da9057afab2f4d6d084d1ee06db" upstream="trident-rom"/>
+  <project name="platform/test/vts-testcase/vndk" path="test/vts-testcase/vndk" revision="61088bb1b171a1598252cce6f741bb820d4bf8ec" upstream="trident-rom"/>
+  <project name="platform/tools/apksig" path="tools/apksig" revision="aa5e81d94308e777cd338807ea6bc823852701f1" upstream="trident-rom"/>
+  <project name="platform/tools/external/fat32lib" path="tools/external/fat32lib" revision="b93883ec8d7c07817ae33ffe044ac84449066a02" upstream="trident-rom"/>
+  <project name="platform/tools/external/gradle" path="tools/external/gradle" revision="a5f47b25389d24b90a7cc3a1688c8f19a837eafc" upstream="trident-rom"/>
+  <project name="platform/tools/loganalysis" path="tools/loganalysis" revision="88493907ea17c2dc903ac90ada2628065ffe05a6" upstream="trident-rom"/>
+  <project name="platform/tools/repohooks" path="tools/repohooks" revision="b8105629a8944a69eb058f0d15464bf3aec86103" upstream="trident-rom"/>
+  <project name="platform/tools/test/connectivity" path="tools/test/connectivity" revision="661f90c02b9fe775b658702c0be68a814828955d" upstream="trident-rom"/>
+  <project name="platform/tools/tradefederation" path="tools/tradefederation/core" revision="9ba46410f65f03c885b65b949f2b04265cffdf05" upstream="trident-rom"/>
+  <project name="platform/tools/tradefederation/contrib" path="tools/tradefederation/contrib" revision="ae5a64ebf99eb93d85a69cbf6a394f8327cb5d67" upstream="trident-rom"/>
+  <project name="platform/vendor/codeaurora/telephony" path="vendor/codeaurora/telephony" revision="0bb880a14f0e053c6d910dcb9659ea71a2501d0b" upstream="trident-rom"/>
+  <project name="platform/vendor/fingerprint" path="vendor/fingerprint" revision="b856f514908142bb3af9a319441a4198655555ba" upstream="trident-rom"/>
+  <project name="platform/vendor/ifaa" path="vendor/ifaa" revision="56682a6a767fb1c1e353e2f991e9342cc870793b" upstream="trident-rom"/>
+  <project name="platform/vendor/nxp/interfaces/opensource/nfc" path="vendor/nxp/interfaces/opensource/nfc" revision="e7f7684c6cd11cffd288c9a71ee2485bb50ee334" upstream="trident-rom">
+    <linkfile dest="vendor/nxp/interfaces/Android.bp" src="prop_pickup.bp"/>
+  </project>
+  <project name="platform/vendor/nxp/opensource/external/libnfc-nci" path="vendor/nxp/opensource/external/libnfc-nci" revision="bd7bf266695b0d30d09283074d9b98485e5a3e10" upstream="trident-rom"/>
+  <project name="platform/vendor/nxp/opensource/frameworks" path="vendor/nxp/opensource/frameworks" revision="2ff88a04373eb600cc13e62d8d42cdcb329a719e" upstream="trident-rom"/>
+  <project name="platform/vendor/nxp/opensource/packages/apps/Nfc" path="vendor/nxp/opensource/packages/apps/Nfc" revision="6016456623c80945a0227bf8ca3b64b81d881dab" upstream="trident-rom"/>
+  <project name="platform/vendor/opensource/audio-kernel" path="kernel/techpack/audio" revision="c33f9eb7f9aa247cf9adc4aabc48a9bd8414ddfe" upstream="trident-rom"/>
+  <project name="platform/vendor/proprietary" path="vendor/qcom/proprietary" revision="7334ea1bdeab5bf736633cfe881db692b348e394" upstream="trident-rom"/>
+  <project name="platform/vendor/proprietary/camx" path="vendor/qcom/proprietary/camx" revision="5a55b839de486e34850fbee6c10ceee9328daa4a" upstream="trident-rom"/>
+  <project name="platform/vendor/proprietary/chi-cdk" path="vendor/qcom/proprietary/chi-cdk" revision="66d0f5020172034c3297dfd57ba9df28d6ca8b8e" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/audio" path="vendor/qcom/opensource/audio" revision="ba7ef8ae1a84dc1e4576c5301225dbdd20055135" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/bluetooth" revision="83b81ad49ac98c36ca8c9bd0c0226fafe0a2adcc" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/bluetooth_ext" path="vendor/qcom/opensource/bluetooth_ext" revision="a4907ff935f854de3c6ff7ffcce3c29debd3895a" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/data-ipa-cfg-mgr" path="vendor/qcom/opensource/data-ipa-cfg-mgr" revision="c17a4ff4c59d7ae28559deccc387d8bdee084c69" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/dataservices" path="vendor/qcom/opensource/dataservices" revision="dba447c1eed52628c756fc2614de119d44da10f3" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/dpm" path="vendor/qcom/opensource/dpm" revision="e17a0e7f08d03ee49769f810a032bafaaf5311b3" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/fm" path="vendor/qcom/opensource/fm" revision="ee397206894cfb727b8b2ce021f584f737518d17" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/fst-manager" path="vendor/qcom/opensource/fst-manager" revision="f4c31ee234ac080470102476819f5d977bba95a4" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/interfaces" path="vendor/qcom/opensource/interfaces" revision="5b15c490373e66de07af872822d914b404d6f1de" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/location" path="vendor/qcom/opensource/location" revision="240076afcf16ba083f0c91017277872e6964bb5e" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/mmc-utils" path="vendor/qcom/opensource/mmc-utils" revision="053754b3d2550699c3a70eedbe655268cfeeae6c" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/rcs-service" path="vendor/qcom/opensource/rcs-service" revision="5dccbab946b999207ff3ceb3ac5f3afea6669775" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/shortcut-fe" path="shortcut-fe" revision="214ece874ced71fcbeb2fbc0a218b0824be60c34" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/time-services" path="vendor/qcom/opensource/time-services" revision="4a916f792ee26e8af67c69057ce1068dbb737e84" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/tools" path="vendor/qcom/opensource/tools" revision="f53e3109292a1ec6d65b856d053f222556e46a69" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/wigig" path="vendor/qcom/opensource/wigig" revision="049e192fccf5b64e4f31e5eb531429088afa7aa2" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/wlan/fw-api" path="vendor/qcom/opensource/wlan/fw-api" revision="d2abad58cc34626493507baababd70a81d144f99" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="6a56d4ae12c19e50246bc3c0e8eb7afebd8b5366" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="6c0a8ec26c7fc5a1978f940b6e0fd6ec68a06d2f" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom-opensource/wlan/utils/sigma-dut" path="vendor/qcom/opensource/wlan/utils/sigma-dut" revision="20d9c6ba5cba92e03665b13f15d778e94c559592" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom/skunk" path="device/qcom/sdm845" revision="425a38094d400cf95084343c348a773ed3621759" upstream="trident-rom"/>
+  <project name="platform/vendor/qcom/thulium" path="device/qcom/msm8996" revision="6a461864882ef2fec0caab813044b2106bfa199d" upstream="trident-rom"/>
+  <project name="platform/vendor/snowBall" path="vendor/snowBall" revision="ee34195460e0735afe289bf1b0de4453cfffc1d7" upstream="surabaya-rom"/>
+  <project name="platform/vendor/stt" path="vendor/stt" revision="a41f30dd8b0b30d745ebae38f045f7c09ab85b9e" upstream="odin-rom"/>
+  <project name="smartisan/frameworks" path="frameworks/smartisanos-base" remote="smartisanos" revision="4f0307b21cde53d31725e6c740dfa3f52e0559ea" upstream="master"/>
+  <project name="toolchain/binutils" revision="dd7b632eac4d3d51c445f60bb87348b005691703" upstream="trident-rom"/>
+  <project name="vendor/ChinaMobile/CmccGps" remote="smartisanos" revision="a6a67717bac73600f2941fc8f0865d6d793d407a" upstream="odin-rom"/>
+  <project name="vendor/ChinaMobile/CmccWifi" remote="smartisanos" revision="b57ed73f82938e02ef37ca3d2671bf7f49677eb5" upstream="odin-rom"/>
+  <project name="vendor/ChinaUnicom" remote="smartisanos" revision="573e55000ac10856729e97cad9b3319234eda2db" upstream="master"/>
+  <project name="vendor/XiaoYuan" remote="smartisanos" revision="0566125c9eb1f955131f64702661d91682a47a3f" upstream="master"/>
+  <project name="vendor/iflytek" remote="smartisanos" revision="0780e39682962fd2522a47c54c02d82a59fb35bb" upstream="master"/>
+  <project name="vendor/smartisan/ThirdPartyApps/HandShaker" remote="smartisanos" revision="514b80b8fbc96cffd9fc2b5696361557cf91dcd9" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/SmartisanIFlyIME" remote="smartisanos" revision="551cbe86462b7971bebcbaa3406b44421047bd20" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/TouchPal_Contacts_oem_module_plugin" remote="smartisanos" revision="52c658e0a2a7e8b2b58bf498332d72972e6308e6" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/UPTsmService_develop" remote="smartisanos" revision="d34a74b5617fe579641e4105caa4fed14d1c7ce1" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/Xiaoyuan_WeiXinPayService" remote="smartisanos" revision="a517c479d1cb7ea830881276ac55a131b1e1e2eb" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.achievo.vipshop" remote="smartisanos" revision="df678f2efce4f7f8824a493a3c80c0382ffa79d0" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.autonavi.minimap" remote="smartisanos" revision="685f6ad4f61d988a2063f0171b0d9e153f3f3847" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.bullet.messenger" remote="smartisanos" revision="1006d32e3134d05e8df93e2bc53cd35283e89d70" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.dianping.v1" remote="smartisanos" revision="cac801944c31fd6ad6478d150f96544fd1663d08" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.gzhm.gamebox" remote="smartisanos" revision="d6120df972602465da253ae2802a5add612000d3" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.icloudoor.bizranking" remote="smartisanos" revision="7df579ed8d6d691e7e68d03bba7c173e2b381d16" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.intsig.BizCardReader" remote="smartisanos" revision="0d2b03df0fb2e2b5bd29efa00ebf14b4d06efc21" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.intsig.camscanner" remote="smartisanos" revision="9589854c2fb8653193c13829a5589b33a738dfa2" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.invensun.seven.trackserver" remote="smartisanos" revision="64092c95bbbc58a89f00af8c5a7a642a301f56e9" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.jiemian.news" remote="smartisanos" revision="68382a99cc137c7e51bd308d94b36e758081f6f9" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.netease.newsreader.activity" remote="smartisanos" revision="dbaf39bca8c0edfd2e6288ba57d515045f534a2c" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.qiyi.video" remote="smartisanos" revision="0ea3322ea188fd664749aadd6c00ac89189b3685" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.sankuai.meituan" remote="smartisanos" revision="395ad055d2464a11b1f512de00ddc35d9551dc52" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.seven.invensun.eyetracknude.modify" remote="smartisanos" revision="1f2d41bbb710f47fcf790fa90de35c35f6046399" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.shuqi.controller" remote="smartisanos" revision="91198af3f753f7296b19d952efb478a97614d522" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.smartisan.bbs" remote="smartisanos" revision="f14b877cc81fa3550d103ba2179feb1e51deb4f6" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.smartisan.reader" remote="smartisanos" revision="269f101c525451e44baeda00532d3b0c16eab211" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.smartisan.smarthome" remote="smartisanos" revision="f4e2cd27ad557b5919a4d568a8a99b12e84006c5" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.smartisanos.handbook" remote="smartisanos" revision="67a2a730e2fabb1f9ccf4400f95556ac05c3775b" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.sohu.inputmethod.sogou" remote="smartisanos" revision="bd77fbd9b3a97a67fe65a0dace689b59ec089ca2" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.ss.android.article.news" remote="smartisanos" revision="48d9e4c431c1e5289f1a03ff838e10e5feaf919b" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.ttdj.cmel" remote="smartisanos" revision="a99860b5b99d0a254a1555e941a6e80d0630e52d" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.ximalaya.ting.android" remote="smartisanos" revision="7fb08d8d00b0174d28fbb2269ae41dff30297210" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.youdao.dict" remote="smartisanos" revision="1c29bfb90cf047d272636926b28f33feee7b8982" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/com.yozo.office" remote="smartisanos" revision="c90d128b7d2ad12063e132dabb5b58ebde85bf7f" upstream="trident-rom"/>
+  <project name="vendor/smartisan/ThirdPartyApps/ctrip.android.view" remote="smartisanos" revision="806c186d8cd7b670d56cb14cd4bf7ba59bb4f437" upstream="trident-rom"/>
+  <project name="vendor/smartisan/config" remote="smartisanos" revision="23e96db4c82f0a470b42fe1bf161758961a93b7d" upstream="trident-rom"/>
+  <project name="vendor/smartisan/icon" remote="smartisanos" revision="3bf80126f53010d60eb9f6825a18258bbee7744c" upstream="trident-rom"/>
+  <project name="vendor/smartisan/prebuilt" remote="smartisanos" revision="537da3b8cef10d478fc47517ffd4a9bd392a0328" upstream="trident-rom"/>
+  <project name="vendor/smartisan/proprietary-new" path="vendor/smartisan/proprietary" remote="smartisanos" revision="acb3a7af1839988e59bf95b77018e048a098c012" upstream="trident-rom"/>
+  <project name="vendor/smartisan/script" remote="smartisanos" revision="c0b81820977a3ee42aef01d590d9b2924a637d65" upstream="trident-rom"/>
+  <project name="vendor/smartisan/security" remote="smartisanos" revision="749cef76ce88571e551d3568539d02b1d91d418a" upstream="trident-rom">
+    <linkfile dest="vendor/smartisan/smartisan.x509.pem" src="smartisan.x509.pem"/>
+  </project>
+  <project name="vendor/smartisanhw" revision="0319697ac2493c6f5d452dbfb0b7551520314972" upstream="trident-rom"/>
+  <project name="vendor/widevine" remote="smartisanos" revision="075b64958d3a36fcf527e232494f7a679975af12" upstream="android-o"/>
+</manifest>
