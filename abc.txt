@@ -5,3 +5,4 @@ xiaolaodi add 123..
 
 xiaolaodi add 1234
 xiaolaodi add 12345
+xiaolaodi add 123456
