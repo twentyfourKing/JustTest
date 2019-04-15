@@ -2,6 +2,7 @@ hello
 hi
 hi wangwujun
 do you have launch
+together?
 xiaolaodi add a word
 xiaolaodi add 123..
 
