@@ -1,3 +1,4 @@
+---------add--------
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch=".." name="smartisan" review="ssh://review.smartisan.cn/"/>
